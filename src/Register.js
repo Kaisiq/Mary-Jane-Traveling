@@ -1,7 +1,7 @@
 import './App.css';
 
 
-function Login() {
+function Register() {
     return(
         <form>
             <input type="email" placeholder="Your@Email.com"></input>
@@ -11,4 +11,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default Register;
