@@ -4,6 +4,22 @@
 }
 
 
+header{
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+    background: #333;
+}
+
+footer{
+    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
+    background: #333;
+}
+
+
+
 #map{
     position:absolute;
 }
