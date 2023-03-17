@@ -1,7 +1,7 @@
 {
   "name": "mary-jane-hackaton",
   "version": "0.1.0",
-  "homepage": "https://kaisiq.github.io/Mary-Jane-Traveling/",
+  "homepage": "https://kaisiq.github.io/Mary-Jane-Traveling",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
