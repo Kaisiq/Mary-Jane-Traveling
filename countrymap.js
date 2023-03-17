@@ -7143,8 +7143,8 @@ var simplemaps_countrymap_mapinfo = {
                     e +
                     " !important; z-index: 1 !important; position: absolute !important; filter: opacity(1) !important;"),
                     e8.appendChild(tI),
-                //     (tI.innerHTML =
-                //         '<a style="overflow: visible !important; clip-path: none !important; opacity: 1 !important;  filter: opacity(1) !important; transform: none !important; display: block !important; visibility: visible !important; font: 18px Verdana, Arial, Helvetica, sans-serif !important; cursor: pointer !important; font-weight: bold !important; float: right !important; color: #000000 !important; text-decoration: none !important;" href="https://simplemaps.com" title="For evaluation use only.">Simplemaps.com Trial</a>'),
+                    (tI.innerHTML =
+                        '<a style="overflow: visible !important; clip-path: none !important; opacity: 1 !important;  filter: opacity(1) !important; transform: none !important; display: block !important; visibility: visible !important; font: 18px Verdana, Arial, Helvetica, sans-serif !important; cursor: pointer !important; font-weight: bold !important; float: right !important; color: #000000 !important; text-decoration: none !important;" href="https://simplemaps.com" title="""></a>'),
                     !ea && 503 != tI.innerHTML.length && (e8.innerHTML = "");
             }
         }
