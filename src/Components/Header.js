@@ -1,4 +1,4 @@
-import './App.css';
+import '../App.css';
 
 
 function Header() {
@@ -10,16 +10,16 @@ function Header() {
             <nav>
                 <ul>
                     <li>
-                        <a href="App">Home</a>
+                        <a href="src/Components/App">Home</a>
                     </li>
                     <li>
-                        <a href="App">Find Friends</a>
+                        <a href="src/Components/App">Find Friends</a>
                     </li>
                     <li>
-                        <a href="App">Profile</a>
+                        <a href="src/Components/App">Profile</a>
                     </li>
                     <li>
-                        <a href="App">Settings</a>
+                        <a href="src/Components/App">Settings</a>
                     </li>
                 </ul>
             </nav>
