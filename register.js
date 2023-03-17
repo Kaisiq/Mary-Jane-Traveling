@@ -5,9 +5,7 @@ function register(){
   
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
-      const userId = userCredential.user.uid;
-      firebase.database().ref('users/' + userId).set({
-        username: username,
+      firebase.database().ref('users/' + email).set({
         email: email
       });
       
