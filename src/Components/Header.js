@@ -10,16 +10,16 @@ function Header() {
             <nav>
                 <ul>
                     <li>
-                        <a href="src/Components/App">Home</a>
+                        <a href="src/index.js">Home</a>
                     </li>
                     <li>
-                        <a href="src/Components/App">Find Friends</a>
+                        <a href="src/index.js">Find Friends</a>
                     </li>
                     <li>
-                        <a href="src/Components/App">Profile</a>
+                        <a href="src/index.js">Profile</a>
                     </li>
                     <li>
-                        <a href="src/Components/App">Settings</a>
+                        <a href="src/register">Влизане</a>
                     </li>
                 </ul>
             </nav>

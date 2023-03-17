@@ -11,7 +11,7 @@ function Login() {
             </form>
             <div>
                 <p>Нямаш акаунт?</p>
-                <button><a href="./register.html">Регистрация</a></button>
+                <button><a href="../register.js">Регистрация</a></button>
             </div>
         </section>
     );
