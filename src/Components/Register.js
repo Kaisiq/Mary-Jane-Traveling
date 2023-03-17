@@ -6,7 +6,7 @@ function Register() {
         <form>
             <input type="email" placeholder="Your@Email.com"></input>
             <input type="password" placeholder="Password"></input>
-            <button onClick="login()">Регистрация</button>
+            <button><a href="../register.js">Регистрация</a></button>
         </form>
     );
 }

@@ -19,7 +19,7 @@ function Header() {
                         <a href="src/index.js">Profile</a>
                     </li>
                     <li>
-                        <a href="src/register">Влизане</a>
+                        <a href="src/register.js">Влизане</a>
                     </li>
                 </ul>
             </nav>
