@@ -10,7 +10,7 @@ function Header() {
             <nav>
                 <ul>
                     <li>
-                        <a href="src/index.js">Home</a>
+                        <a href={"src/index.js"}>Home</a>
                     </li>
                     <li>
                         <a href="src/index.js">Find Friends</a>
