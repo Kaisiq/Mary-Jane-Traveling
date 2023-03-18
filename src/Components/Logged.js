@@ -42,10 +42,8 @@ function Logged(){
         try {
             // Query the Firebase database for the desired data
             // const dataRef = database.ref(`RegionData/${region}`);
-            const dataDescr = database.ref(`RegionData/${region}/Desc`);
+            const dataDescr = database.ref(`RegionData/${region}`);
 
-
-            // Wait for the query to complete and get the data snapshot
             // const snapshot = await dataRef.once("value");
             const snapshot = await dataDescr.once("value");
             // Get the data from the snapshot and return as JSON
@@ -56,14 +54,36 @@ function Logged(){
         }
     }
 
+    async function addLiToUl(ulist, region, from){
+        var data = await fetchDataFromFirebase(region + `/Activities/${from}/name`);
+        var li = document.createElement("li");
+        li.textContent = JSON.parse(data);
+        if(li.textContent !== "") {
+            ulist.appendChild(li);
+        }
+    }
     async function handleFetch(region){
-        const pDescr = document.querySelector(".descr");
+        const ulist = document.querySelector(".list_activities");
         const city_name = document.querySelector(".city_name");
-        const descData = await fetchDataFromFirebase(region);
-        pDescr.textContent = JSON.parse(descData);
+
+        addLiToUl(ulist, region, "films");
+        addLiToUl(ulist, region, "art");
+        addLiToUl(ulist, region, "clubbing");
+        addLiToUl(ulist, region, "games");
+        addLiToUl(ulist, region, "hiking");
+        addLiToUl(ulist, region, "museums");
+        addLiToUl(ulist, region, "music");
+        addLiToUl(ulist, region, "sightseeing");
+        addLiToUl(ulist, region, "sport");
+        addLiToUl(ulist, region, "theatre");
+
+        // ulist.textContent = JSON.parse(descData);
         city_name.textContent = region;
     }
 
+    async function testFetch() {
+        handleFetch("Lovech");
+    }
 
     return (
         <div className='main-screen'>
@@ -82,9 +102,11 @@ function Logged(){
                     <button>video</button>
                     <button onClick={goToInfo}>info</button>
                 </div>
-                <p className={"descr"}>Lorem ipsum dolor sit amet</p>
+                <ul className={"list_activities"}>
+                </ul>
+                {/*<p className={"descr"}>Lorem ipsum dolor sit amet</p>*/}
                 <div>
-                    <button onClick={goToBooking}>reserve</button>
+                    <button onClick={testFetch}>reserve</button>
                 </div>
             </div>
         </div>
