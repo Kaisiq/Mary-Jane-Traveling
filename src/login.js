@@ -4,7 +4,7 @@ import './index.css'
 import React, { useState } from 'react'
 import reportWebVitals from './reportWebVitals'
 import firebase from './firebase'
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider,FacebookAuthProvider } from "firebase/auth"
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider } from "firebase/auth"
 import { useNavigate } from "react-router-dom"
 import fblogo from './media/facebook.webp'
 import googlelogo from './media/google.png'
@@ -139,19 +139,19 @@ function LoginForm() {
         </label>
         <input type="password" value={password} placeholder={"your password"} onChange={handlePasswordChange} />
         <button onClick={zoomin} type="submit">{isRegistering ? 'Регистриране' : 'Влизане'}</button>
-      </form>
         <div className={"flex"}>
-        <button onClick={toggleRegister}>
-          {isRegistering ? 'Вече имаш акаунт?' : 'Регистрация'}
-        </button>
-        <button>
-          Админ
-        </button>
-      </div>
-      <div className={"flex"}>
-        <button className={"small-img"}><img src={fblogo} alt={"fblogo"} onClick={handleFacebookSubmit}/></button>
-        <button className={"small-img"}><img src={googlelogo} alt={"googlelogo"} onClick={handleGoogleSubmit} /></button>
-      </div>
+          <button onClick={toggleRegister}>
+            {isRegistering ? 'Вече имаш акаунт?' : 'Регистрация'}
+          </button>
+          <button>
+            Админ
+          </button>
+        </div>
+        <div className={"flex"}>
+          <button className={"small-img"}><img src={fblogo} alt={"fblogo"} onClick={handleFacebookSubmit} /></button>
+          <button className={"small-img"}><img src={googlelogo} alt={"googlelogo"} onClick={handleGoogleSubmit} /></button>
+        </div>
+      </form>
     </div>
   );
 }
