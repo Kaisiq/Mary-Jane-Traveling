@@ -8,22 +8,18 @@ import firebaseConfig from './firebase';
 import firebase from './firebase';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-class placeHolderName extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Login Page</h1>
-        <LoginForm firebase = {firebase}/>
-      </div>
-    );
-  }
-}
-export default placeHolderName;
 root.render(
   <React.StrictMode>
-    <App />
+    <h1>Login Page</h1>
+    <LoginForm/>  
   </React.StrictMode>
-); 
+)
+// export default placeHolderName;
+// root.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+// ); 
 // something like this should be for the displaying of the login form
 /*ReactDOM.hydrate(
   <React.StrictMode>

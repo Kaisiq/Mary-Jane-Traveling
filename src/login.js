@@ -6,6 +6,7 @@ import Login from "./Components/Login";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import firebase from './firebase';
+import './login.css'
 
 
 function LoginForm(){
@@ -36,6 +37,7 @@ function LoginForm(){
       };
   
     return (
+    <div className='login-form'>
       <form onSubmit={handleSubmit}>
         <label>
           Email:
@@ -47,6 +49,7 @@ function LoginForm(){
         </label>
         <button type="submit">Sign In</button>
       </form>
+      </div>
     );
   }
   export default LoginForm;
