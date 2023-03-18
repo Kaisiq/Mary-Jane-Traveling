@@ -1,10 +1,12 @@
 import React,{useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import { redirect } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import firebase from './firebase';
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
 import './login.css'
+
 
 
 function LoginForm(){
@@ -28,19 +30,19 @@ function LoginForm(){
     if (isRegistering) {
          firebase.auth().createUserWithEmailAndPassword(email, password)
                        .then((userCredential) => {
-                // User registered successfully
                 console.log(email);
                 const user = userCredential.user;
                 console.log('User registered:', user);
+
               firebase.auth().signInWithEmailAndPassword(email, password)
                 .then((userLoggedInCredential) => {
-                // User logged in successfully
                 const user = userLoggedInCredential.user;
                 console.log('User logged in:', user);
               })
               .catch((error) => {
                 console.error('Error logging in user:', error);
               });
+              return redirect('./ChooseActivites')
               })
               .catch((error) => {
                 console.error('Error registering user:', error);

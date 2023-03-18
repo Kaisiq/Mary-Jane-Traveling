@@ -16,41 +16,6 @@ function StartPage(){
         setIsLogged(!isLogged);
     }
 
-    // const handleSubmit = (event) => {
-        // event.preventDefault();
-        // const auth = getAuth();
-        // if (isRegistering) {
-        //     firebase.auth().createUserWithEmailAndPassword(email, password)
-        //         .then((userCredential) => {
-        //             // User registered successfully
-        //             console.log(email);
-        //             const user = userCredential.user;
-        //             console.log('User registered:', user);
-        //             firebase.auth().signInWithEmailAndPassword(email, password)
-        //                 .then((userLoggedInCredential) => {
-        //                     // User logged in successfully
-        //                     const user = userLoggedInCredential.user;
-        //                     console.log('User logged in:', user);
-        //                 })
-        //                 .catch((error) => {
-        //                     console.error('Error logging in user:', error);
-        //                 });
-        //         })
-        //         .catch((error) => {
-        //             console.error('Error registering user:', error);
-        //         });
-        // } else {
-        //     firebase.auth().signInWithEmailAndPassword(email, password)
-        //         .then((userCredential) => {
-        //             // User logged in successfully
-        //             const user = userCredential.user;
-        //             console.log('User logged in:', user);
-        //         })
-        //         .catch((error) => {
-        //             console.error('Error logging in user:', error);
-        //         });
-        // }
-    // }
     return (
         <div className='login-box-container'>
             {isLogged ? <Logged/> : <LoginForm/>}
