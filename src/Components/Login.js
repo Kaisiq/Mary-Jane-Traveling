@@ -1,7 +1,6 @@
 import '../App.css';
 import firebase from '../firebase';
 
-
 function Login() {
     return(
         <section>
