@@ -35,8 +35,9 @@ function Logged(){
         navigate('/Info');
     }
 
-    function goToBooking(){
-        
+    function goToBooking(Location){
+        const bookingSearchUrl = `https://www.booking.com/search?location=${Location}`;
+        window.location.href = bookingSearchUrl;
     }
 
 
@@ -129,7 +130,9 @@ function Logged(){
                     <button onClick={goToInfo}>info</button>
                 </div>
                 <p className={"descr"}>Lorem ipsum dolor sit amet</p>
-                <button  onClick = {goToBooking}>reserve</button>
+                <div>
+                    <button  onClick = {goToBooking("Sofia")}>reserve</button>
+                </div>
             </div>
         </div>
     );
