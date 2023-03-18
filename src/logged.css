@@ -18,6 +18,9 @@
     color:white;
     transition: 0.3s ease-in-out;
 }
+.list_activities li{
+    font-size: 1.5rem;
+}
 .small-info h2{
     font-size: 4rem;
 }
