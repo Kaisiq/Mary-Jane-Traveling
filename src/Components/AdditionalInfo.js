@@ -77,7 +77,7 @@ function Info(){
               <p>{JSON.stringify(data,null,2)}</p>
               <img src={doge} alt={"dog"}/>
           </div>
-          <button onClick={goToBooking}>Reserve</button>
+          <button className={"reserve"} onClick={goToBooking}>Reserve</button>
       </div>
     );
 
