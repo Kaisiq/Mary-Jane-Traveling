@@ -1,17 +1,55 @@
-import React,{useState} from 'react';
-import ReactDOM from 'react-dom/client';
+import React, {useEffect, useRef} from 'react';
 import '../index.css';
 import reportWebVitals from '../reportWebVitals';
 import firebase from '../firebase';
 import '../logged.css';
-import { useRef, useEffect } from 'react';
-import { register } from 'swiper/element/bundle';
+import {register} from 'swiper/element/bundle';
+
 
 register();
 
 
 
 function Logged(){
+// Get a reference to the Firebase database
+    const database = firebase.database();
+    const pDescr = document.querySelector(".desc");
+    const city_name = document.querySelector(".city_name");
+
+// Function to fetch data from Firebase and return as JSON
+    async function fetchDataFromFirebase(region) {
+        try {
+            // Query the Firebase database for the desired data
+            const dataRef = database.ref(`RegionData/${region}`);
+            const dataDescr = database.ref(`RegionData/${region}/Desc`);
+
+
+            // Wait for the query to complete and get the data snapshot
+            // const snapshot = await dataRef.once("value");
+            const snapshot = await dataDescr.once("value");
+            // Get the data from the snapshot and return as JSON
+            const data = snapshot.val();
+            const jsonData = JSON.stringify(data);
+            pDescr.textContent = JSON.parse(jsonData);
+            city_name.textContent = region;
+            return true;
+        } catch (error) {
+            console.error("Error fetching data from Firebase:", error);
+        }
+    }
+
+    fetchDataFromFirebase("Lovech")
+        .then((jsonData) => console.log(jsonData))
+        .catch((error) => console.error(error));
+// Call the fetchDataFromFirebase function to get the data as JSON
+//     fetchDataFromFirebase()
+//         .then((jsonData) => console.log(jsonData))
+//         .catch((error) => console.error(error));
+
+
+
+
+
     const swiperElRef = useRef(null);
 
     useEffect(() => {
@@ -49,7 +87,7 @@ function Logged(){
                 </button>
             </header>
             <div className='small-info'>
-                <h2>Sofia</h2>
+                <h2 className={"city_name"}>Sofia</h2>
                 <swiper-container
                     ref={swiperElRef}
                     slides-per-view="1"
@@ -64,7 +102,7 @@ function Logged(){
                     <button>video</button>
                     <button>info</button>
                 </div>
-                <p>Lorem ipsum dolor sit amet</p>
+                <p className={"desc"}>Lorem ipsum dolor sit amet</p>
                 <button>reserve</button>
             </div>
         </div>
