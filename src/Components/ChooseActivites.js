@@ -22,7 +22,7 @@ function ChooseActivites(){
   
     return (
     
-      <div>
+      <div className={"content"}>
         <h2>Избери любимите си занимания:</h2>
         <form className={'fav-entertainments'}>
           <label className={'hiking box'}>
