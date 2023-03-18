@@ -1,6 +1,4 @@
 import './login.css'
-import './index.css'
-
 import React, { useState } from 'react'
 import reportWebVitals from './reportWebVitals'
 import firebase from './firebase'
