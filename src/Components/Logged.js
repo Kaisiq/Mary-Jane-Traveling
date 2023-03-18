@@ -29,7 +29,8 @@ function Logged(){
     }
 
     function goToInfo(){
-        navigate('/Info', currentRegion);
+        navigate('/Info', {
+            state: {location: currentRegion}});
     }
 
     function goToBooking(){

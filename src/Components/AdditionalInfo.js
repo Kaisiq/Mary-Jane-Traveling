@@ -3,6 +3,7 @@ import '../info.css';
 import {useNavigate} from "react-router-dom";
 import doge from '../media/default-profile-picture.jpg';
 import {useState, useEffect} from "react";
+import { useLocation } from 'react-router-dom';
 
 
 
@@ -10,6 +11,7 @@ function Info(){ //TODO: Region read
     const [data,setData] = useState(null);
     const [loading,setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const { state } = useLocation();
     const database = firebase.database();
     const navigate = useNavigate();
     function handleLogout(){
@@ -44,7 +46,7 @@ function Info(){ //TODO: Region read
     }
 
     useEffect(() => {
-        fetchDataFromFirebase("Lovech")// TODO: Region add in place of lovech
+        fetchDataFromFirebase(state.location)// TODO: Region add in place of lovech
             .then(res => {
                 setData(res);
             })
