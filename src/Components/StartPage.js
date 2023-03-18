@@ -10,19 +10,32 @@ import LoginForm from "../login";
 import ChooseActivities from './ChooseActivites';
 
 
-function StartPage(props){
+function StartPage(){
     const [isLogged, setIsLogged] = useState(false);
     const [userRegistered, setUserRegistered] = useState(false);
+    const [activitesSubmitted,setActivitiesSubmission] = useState(false);
     const handleLogin = () =>{
         setIsLogged(true);
     }
     const handleRegister = () =>{
-        props = Object.preventExtensions(props);
         setUserRegistered(true);
+    }
+    const handleSubmit = () =>{
+        setActivitiesSubmission(true);
     }
     return (
         <div className='login-box-container'>
-            {isLogged ? (<Logged />) : userRegistered ? (<ChooseActivities />) : (<LoginForm onLogin={handleLogin} onRegister={handleRegister} />)}
+            {isLogged ? (
+                <Logged />
+                ) : userRegistered ? (
+                    activitesSubmitted ? (
+                    <Logged />
+                ) : (
+                    <ChooseActivities onSubmit={handleSubmit} />
+                )
+                ) : (
+                <LoginForm onLogin={handleLogin} onRegister={handleRegister} />
+                )}
     </div>
     );
 }

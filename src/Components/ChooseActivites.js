@@ -6,15 +6,18 @@ import firebase from '../firebase';
 import '../chooseactivities.css';
 
 
-function ChooseActivites(){
+function ChooseActivites({onSubmit}){
     const [checkedItems, setCheckedItems] = useState({});
-
+    const [isConfirmed, setConfirm] = useState(false);
     const handleChange = (event) => {
       setCheckedItems({
         ...checkedItems,
         [event.target.name]: event.target.checked,
       });
     };
+    const handleConfirmation = () =>{
+      onSubmit()
+    }
   
     return (
     
@@ -111,6 +114,7 @@ function ChooseActivites(){
                 />
                 Clubbing
             </label>
+            <button onClick={handleConfirmation}>Confirm Selection</button>
         </form>
       </div>
     );
