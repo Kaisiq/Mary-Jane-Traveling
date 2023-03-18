@@ -1,15 +1,15 @@
 import React, { useState ,Component} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './Components/App';
 import reportWebVitals from './reportWebVitals';
+import App from './Components/App';
 import LoginForm from './login';
 import Logged from "./Components/Logged";
 import Profile from "./Components/Profile";
+import ChooseActivites from './Components/ChooseActivites';
 import './login.css'
 import firebaseConfig from './firebase';
 import firebase from './firebase';
-import ChooseActivites from './Components/ChooseActivites';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import {
   createBrowserRouter,
