@@ -44,12 +44,12 @@ function LoginForm(){
                 .then((userLoggedInCredential) => {
                 const user = userLoggedInCredential.user;
                 console.log('User logged in:', user);
-                
+                navigate('/ChooseActivites')
               })
               .catch((error) => {
                 console.error('Error logging in user:', error);
               });
-              navigate('/ChooseActivites')
+             
               })
               .catch((error) => {
                 console.error('Error registering user:', error);
@@ -60,13 +60,13 @@ function LoginForm(){
                 // User logged in successfully
                 const user = userCredential.user;
                 console.log('User logged in:', user);
-                
+                navigate('/Logged');
               })
               .catch((error) => {
                 console.error('Error logging in user:', error);
               });
 
-             navigate('/Logged');
+             
           }
         }
 
