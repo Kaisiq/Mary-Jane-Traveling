@@ -7,21 +7,23 @@ import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } fr
 import '../login.css'
 import Logged from "./Logged";
 import LoginForm from "../login";
+import ChooseActivities from './ChooseActivites';
 
 
 function StartPage(props){
     const [isLogged, setIsLogged] = useState(false);
     const [userRegistered, setUserRegistered] = useState(false);
-    function toggleLogged(){
-        setIsLogged(!isLogged);
-    }
     const handleLogin = () =>{
         setIsLogged(true);
     }
+    const handleRegister = () =>{
+        props = Object.preventExtensions(props);
+        setUserRegistered(true);
+    }
     return (
         <div className='login-box-container'>
-            {isLogged ? <Logged/> : <LoginForm onLogin = {handleLogin}/>}
-        </div>
+            {isLogged ? (<Logged />) : userRegistered ? (<ChooseActivities />) : (<LoginForm onLogin={handleLogin} onRegister={handleRegister} />)}
+    </div>
     );
 }
 export default StartPage;

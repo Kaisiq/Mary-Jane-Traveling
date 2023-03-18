@@ -8,7 +8,7 @@ import './login.css'
 
 
 
-function LoginForm(props){
+function LoginForm({onLogin,onRegister}){
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
     const [isRegistering, setIsRegistering] = useState(false);
@@ -31,7 +31,6 @@ function LoginForm(props){
          firebase.auth().createUserWithEmailAndPassword(email, password)
                        .then((userCredential) => {
                 console.log(email);
-                props.userRegistered = true;
                 const user = userCredential.user;
                 console.log('User registered:', user);
 
@@ -39,11 +38,12 @@ function LoginForm(props){
                 .then((userLoggedInCredential) => {
                 const user = userLoggedInCredential.user;
                 console.log('User logged in:', user);
+                onRegister()
               })
               .catch((error) => {
                 console.error('Error logging in user:', error);
               });
-              registeringForFirstTime = true;
+
               })
               .catch((error) => {
                 console.error('Error registering user:', error);
@@ -54,7 +54,7 @@ function LoginForm(props){
                 // User logged in successfully
                 const user = userCredential.user;
                 console.log('User logged in:', user);
-                props.onLogin();
+                onLogin();
               })
               .catch((error) => {
                 console.error('Error logging in user:', error);
