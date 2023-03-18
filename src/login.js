@@ -1,4 +1,4 @@
-import './login.css'
+import './styles.css'
 import React, { useState } from 'react'
 import reportWebVitals from './reportWebVitals'
 import firebase from './firebase'

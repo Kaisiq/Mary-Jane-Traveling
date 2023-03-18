@@ -1,5 +1,4 @@
-import './index.css'
-import './login.css'
+import './styles.css';
 
 import React, { useState, Component } from 'react'
 import ReactDOM from 'react-dom/client'

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from '../reportWebVitals';
 import firebase from '../firebase';
 import { useNavigate } from "react-router-dom";
-import '../chooseactivities.css';
+import '../styles.css';
 
 
 function ChooseActivities(){
@@ -22,7 +22,7 @@ function ChooseActivities(){
   
     return (
     
-      <div className={"content"}>
+      <div className={"content-activities"}>
         <h2>Избери любимите си занимания:</h2>
         <form className={'fav-entertainments'}>
           <label className={'hiking box'}>
