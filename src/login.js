@@ -1,7 +1,6 @@
 import React,{useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { redirect } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import firebase from './firebase';
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
@@ -9,11 +8,11 @@ import './login.css'
 
 
 
-function LoginForm(){
+function LoginForm(props){
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
     const [isRegistering, setIsRegistering] = useState(false);
-  
+
     const handleEmailChange = (event) =>{
       setEmail(event.target.value);
     }
@@ -24,6 +23,7 @@ function LoginForm(){
      setIsRegistering(!isRegistering);
           }
 
+    let registeringForFirstTime = false;
     const handleSubmit = (event) => {
         event.preventDefault();
         const auth = getAuth();
@@ -31,6 +31,7 @@ function LoginForm(){
          firebase.auth().createUserWithEmailAndPassword(email, password)
                        .then((userCredential) => {
                 console.log(email);
+                props.userRegistered = true;
                 const user = userCredential.user;
                 console.log('User registered:', user);
 
@@ -42,7 +43,7 @@ function LoginForm(){
               .catch((error) => {
                 console.error('Error logging in user:', error);
               });
-              return redirect('./ChooseActivites')
+              registeringForFirstTime = true;
               })
               .catch((error) => {
                 console.error('Error registering user:', error);
@@ -53,12 +54,13 @@ function LoginForm(){
                 // User logged in successfully
                 const user = userCredential.user;
                 console.log('User logged in:', user);
+                props.onLogin();
               })
               .catch((error) => {
                 console.error('Error logging in user:', error);
               });
           }
-        }
+        }  
     return (
     <div className='login-form'>
         <div className={'background'}></div>

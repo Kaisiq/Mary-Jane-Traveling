@@ -9,16 +9,18 @@ import Logged from "./Logged";
 import LoginForm from "../login";
 
 
-function StartPage(){
+function StartPage(props){
     const [isLogged, setIsLogged] = useState(false);
-
+    const [userRegistered, setUserRegistered] = useState(false);
     function toggleLogged(){
         setIsLogged(!isLogged);
     }
-
+    const handleLogin = () =>{
+        setIsLogged(true);
+    }
     return (
         <div className='login-box-container'>
-            {isLogged ? <Logged/> : <LoginForm/>}
+            {isLogged ? <Logged/> : <LoginForm onLogin = {handleLogin}/>}
         </div>
     );
 }
