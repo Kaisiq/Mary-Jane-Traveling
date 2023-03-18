@@ -2,10 +2,11 @@ import './login.css'
 import React, { useState } from 'react'
 import reportWebVitals from './reportWebVitals'
 import firebase from './firebase'
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider } from "firebase/auth"
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, getAdditionalUserInfo } from "firebase/auth"
 import { useNavigate } from "react-router-dom"
 import fblogo from './media/facebook.webp'
 import googlelogo from './media/google.png'
+
 
 function LoginForm() {
   const [email, setEmail] = useState('');
@@ -53,7 +54,7 @@ function LoginForm() {
           // User logged in successfully
           const user = userCredential.user;
           console.log('User logged in:', user);
-          setTimeout(function () { navigate('/Logged') }, 500);
+          setTimeout(function () { navigate('/ChooseActivities') }, 500);
         })
         .catch((error) => {
           console.error('Error logging in user:', error);
@@ -72,11 +73,14 @@ function LoginForm() {
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
         // The signed-in user info.
-        const user = result.user;
+        const user = auth.currentUser;
+      
+        navigate('/ChooseActivities')
+            
         // IdP data available using getAdditionalUserInfo(result)
-        // ...
+        // ..
 
-        navigate('/Logged')
+       
       }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
@@ -89,6 +93,7 @@ function LoginForm() {
       });
   }
 
+
   const handleFacebookSubmit = async () => {
     const provider = new FacebookAuthProvider();
     const auth = getAuth();
@@ -99,7 +104,7 @@ function LoginForm() {
         const token = credential.accessToken;
         const user = result.user;
 
-        navigate('/Logged')
+        navigate('/ChooseActivities')
       }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;

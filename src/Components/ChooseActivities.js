@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import '../chooseactivities.css';
 
 
-function ChooseActivites(){
+function ChooseActivities(){
     const [checkedItems, setCheckedItems] = useState({});
     const [isConfirmed, setConfirm] = useState(false);
     const navigate = useNavigate();
@@ -122,4 +122,4 @@ function ChooseActivites(){
 
 }
 
-export default ChooseActivites;
+export default ChooseActivities;
