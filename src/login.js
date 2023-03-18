@@ -60,10 +60,23 @@ function LoginForm(props){
                 console.error('Error logging in user:', error);
               });
           }
-        }  
+        }
+
+    const zoomin = () => {
+        var myImg = document.getElementById("map");
+        var currTransform = myImg.style.transform;
+        if (currTransform) {
+            myImg.style.transform = '';
+        }
+        else {
+            myImg.style.transform = 'scale(5,5)';
+        }
+    }
+
+
     return (
     <div className='login-form'>
-        <div className={'background'}></div>
+        <div id={"map"} className={'background'}></div>
         <h2>{isRegistering ? 'Регистрация' : 'Влизане'}</h2>
       <form onSubmit={handleSubmit}>
         <label>
@@ -74,7 +87,7 @@ function LoginForm(props){
           Password:
         </label>
           <input type="password" value={password} placeholder={"your password"} onChange={handlePasswordChange} />
-        <button type="submit">{isRegistering ? 'Регистриране' : 'Влизане'}</button>
+          <button onClick={zoomin} type="submit">{isRegistering ? 'Регистриране' : 'Влизане'}</button>
       </form>
       <button onClick={toggleRegister}>
         {isRegistering ? 'Вече имаш акаунт?' : 'Регистрация'}

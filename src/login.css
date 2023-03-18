@@ -17,6 +17,8 @@
     width:100vh;
     height:100vh;
     background: url(../media/background_earth.png);
+    filter: blur(6px);
+    transition: 4s;
     background-size: 2000px;
     border-radius: 50%;
     box-shadow: inset 8px 36px 80px 36px rgb(0, 0, 0), inset -6px 0 12px 4px rgba(255, 255, 255, 0.3);
