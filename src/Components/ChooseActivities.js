@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from '../reportWebVitals';
 import firebase from '../firebase';
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import '../styles.css';
 
 
 function ChooseActivities(){
     const [checkedItems, setCheckedItems] = useState({});
     const [isConfirmed, setConfirm] = useState(false);
+    const { state } = useLocation();
     const navigate = useNavigate();
     const handleChange = (event) => {
       setCheckedItems({
@@ -18,8 +20,23 @@ function ChooseActivities(){
       var toDarken = document.querySelector("."+event.target.name);
       toDarken.classList.toggle('darken');
     };
-    const handleConfirmation = () => {
-        navigate('/Logged');
+
+    const handleConfirmation = () =>{
+      const userRef = firebase.database().ref('Users/' + state.uid);
+      const checkedCheckboxes = Object.entries(checkedItems)
+    .filter(([name, isChecked]) => isChecked)
+    .map(([name]) => name).join(',');
+
+    userRef.update({
+      cats: checkedCheckboxes
+    })
+    .then(() => {
+      console.log('Categories updated successfully');
+    })
+    .catch((error) => {
+      console.error('Error updating Categories:', error);
+    });
+      navigate('/Logged', {state: {uid: state.uid}});
     }
     return (
 
