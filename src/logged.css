@@ -36,6 +36,10 @@
     text-shadow: 0 1.5px 0 rgba(0, 0, 0, 0.3);
     color:white;
     cursor: pointer;
+    transition: 0.3s;
+}
+.small-info button:hover{
+    background-color: #29157a;
 }
 .swiper, swiper-container{
     width:90%;
@@ -56,6 +60,7 @@ swiper-slide{
     gap: 10px;
 }
 .header-nav button{
+    transition: 0.3s;
     padding: 10px;
     font-size: 1rem;
     font-weight: bold;
@@ -65,4 +70,7 @@ swiper-slide{
     text-shadow: 0 1.5px 0 rgba(0, 0, 0, 0.3);
     color: white;
     cursor: pointer;
+}
+.header-nav button:hover{
+    background-color: #29157a;
 }
