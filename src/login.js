@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import firebase from './firebase';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from "react-router-dom";
 import './login.css'
+import './index.css'
+
+import React, { useState } from 'react'
+import reportWebVitals from './reportWebVitals'
+import firebase from './firebase'
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider,FacebookAuthProvider } from "firebase/auth"
+import { useNavigate } from "react-router-dom"
 import fblogo from './media/facebook.webp'
 import googlelogo from './media/google.png'
 
@@ -14,8 +14,6 @@ function LoginForm() {
   const [password, setPassword] = useState('');
   const [isRegistering, setIsRegistering] = useState(false);
   const navigate = useNavigate();
-  const provider = new GoogleAuthProvider();
-  provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -66,6 +64,9 @@ function LoginForm() {
   }
 
   const handleGoogleSubmit = async () => {
+    const provider = new GoogleAuthProvider();
+    provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+
     const auth = getAuth();
     signInWithPopup(auth, provider)
       .then((result) => {
@@ -76,6 +77,8 @@ function LoginForm() {
         const user = result.user;
         // IdP data available using getAdditionalUserInfo(result)
         // ...
+
+        navigate('/Logged')
       }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
@@ -84,6 +87,29 @@ function LoginForm() {
         const email = error.customData.email;
         // The AuthCredential type that was used.
         const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
+      });
+  }
+
+  const handleFacebookSubmit = async () => {
+    const provider = new FacebookAuthProvider();
+    const auth = getAuth();
+
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const credential = FacebookAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        const user = result.user;
+
+        navigate('/Logged')
+      }).catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = FacebookAuthProvider.credentialFromError(error);
         // ...
       });
   }
@@ -98,28 +124,6 @@ function LoginForm() {
       myImg.style.transform = 'scale(5,5)';
     }
   }
-
-
-  const [user, loading, error] = useAuthState(firebase.auth());
-  const handleFacebook = async () => {
-    try {
-      const provider = new firebase.auth.FacebookAuthProvider();
-      await firebase.auth().signInWithPopup(provider);
-
-      navigate('/Logged')
-    } catch (error) {
-      console.error(error);
-    }
-
-
-    if (loading) {
-      alert("Loading...");
-    }
-
-    if (error) {
-      alert("An error occured while connecting to facebook.")
-    };
-  };
 
   return (
     <div className='login-form'>
@@ -148,7 +152,7 @@ function LoginForm() {
         </button>
       </div>
       <div className={"flex"}>
-        <button className={"small-img"}><img src={fblogo} alt={"fblogo"} /></button>
+        <button className={"small-img"}><img src={fblogo} alt={"fblogo"} onClick={handleFacebookSubmit}/></button>
         <button className={"small-img"}><img src={googlelogo} alt={"googlelogo"} onClick={handleGoogleSubmit} /></button>
       </div>
     </div>
