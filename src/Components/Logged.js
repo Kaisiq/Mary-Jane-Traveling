@@ -40,6 +40,14 @@ function Logged(){
     }, []);
     return (
         <div className='main-screen'>
+            <header className={"header-nav"}>
+                <button>
+                    Profile
+                </button>
+                <button>
+                    Logout
+                </button>
+            </header>
             <div className='small-info'>
                 <h2>Sofia</h2>
                 <swiper-container
