@@ -4,7 +4,7 @@ import reportWebVitals from '../reportWebVitals';
 import firebase from '../firebase';
 import '../logged.css';
 import {register} from 'swiper/element/bundle';
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 
 register();
@@ -14,10 +14,8 @@ register();
 function Logged(){
 // Get a reference to the Firebase database
     const database = firebase.database();
-    const pDescr = document.querySelector(".desc");
-    const city_name = document.querySelector(".city_name");
+    const navigate = useNavigate();
 
-    const navigate = useNavigate(); 
     const goToProfile = () => {
         navigate('/Profile');
     }
@@ -36,7 +34,7 @@ function Logged(){
     async function fetchDataFromFirebase(region) {
         try {
             // Query the Firebase database for the desired data
-            const dataRef = database.ref(`RegionData/${region}`);
+            // const dataRef = database.ref(`RegionData/${region}`);
             const dataDescr = database.ref(`RegionData/${region}/Desc`);
 
 
@@ -45,22 +43,24 @@ function Logged(){
             const snapshot = await dataDescr.once("value");
             // Get the data from the snapshot and return as JSON
             const data = snapshot.val();
-            const jsonData = JSON.stringify(data);
-            pDescr.textContent = JSON.parse(jsonData);
-            city_name.textContent = region;
-            return true;
+            return JSON.stringify(data);
         } catch (error) {
             console.error("Error fetching data from Firebase:", error);
         }
     }
 
-    fetchDataFromFirebase("Lovech")
-        .then((jsonData) => console.log(jsonData))
-        .catch((error) => console.error(error));
-// Call the fetchDataFromFirebase function to get the data as JSON
-//     fetchDataFromFirebase()
-//         .then((jsonData) => console.log(jsonData))
-//         .catch((error) => console.error(error));
+    async function handleFetch(region){
+        const pDescr = document.querySelector(".descr");
+        const city_name = document.querySelector(".city_name");
+        const descData = await fetchDataFromFirebase(region);
+        pDescr.textContent = JSON.parse(descData);
+        city_name.textContent = region;
+    }
+
+    async function testFetch(){
+        handleFetch("Lovech");
+    }
+
 
 
 
@@ -116,9 +116,9 @@ function Logged(){
                 </swiper-container>
                 <div className={'buttons'}>
                     <button>video</button>
-                    <button>info</button>
+                    <button onClick={testFetch}>info</button>
                 </div>
-                <p className={"desc"}>Lorem ipsum dolor sit amet</p>
+                <p className={"descr"}>Lorem ipsum dolor sit amet</p>
                 <button>reserve</button>
             </div>
         </div>

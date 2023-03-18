@@ -15,6 +15,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import ProfilePage from "./Components/Profile";
 
 
 
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/Profile",
-    element: <Profile/>
+    element: <ProfilePage/>
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
