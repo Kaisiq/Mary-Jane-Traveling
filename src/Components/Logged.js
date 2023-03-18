@@ -3,12 +3,22 @@ import ReactDOM from 'react-dom/client';
 import '../index.css';
 import reportWebVitals from '../reportWebVitals';
 import firebase from '../firebase';
-import '../login.css'
+import '../logged.css'
 
 
 function Logged(){
     return (
         <div className='main-screen'>
+            <div className='small-info'>
+                <h2>Sofia</h2>
+                {/*<img />*/}
+                <div className={'buttons'}>
+                    <button>video</button>
+                    <button>info</button>
+                </div>
+                <p>Lorem ipsum dolor sit amet</p>
+                <button>reserve</button>
+            </div>
         </div>
     );
 }
