@@ -11,6 +11,7 @@ function Logged(){
 // Get a reference to the Firebase database
     const database = firebase.database();
     const navigate = useNavigate();
+    var currentRegion = "";
 
     function goToProfile(){
         navigate('/Profile');
@@ -28,7 +29,7 @@ function Logged(){
     }
 
     function goToInfo(){
-        navigate('/Info');
+        navigate('/Info', currentRegion);
     }
 
     function goToBooking(){
@@ -66,6 +67,7 @@ function Logged(){
         }
     }
     async function handleFetch(region){
+        currentRegion = region;
         const ulist = document.querySelector(".list_activities");
         const city_name = document.querySelector(".city_name");
 

@@ -1,11 +1,15 @@
-import React, {useEffect, useRef} from 'react';
-import reportWebVitals from '../reportWebVitals';
 import firebase from '../firebase';
 import '../info.css';
 import {useNavigate} from "react-router-dom";
 import doge from '../media/default-profile-picture.jpg';
+import {useState, useEffect} from "react";
 
-function Info(){
+
+
+function Info(){ //TODO: Region read
+    const [data,setData] = useState(null);
+    const [loading,setLoading] = useState(true);
+    const [error, setError] = useState(null);
     const database = firebase.database();
     const navigate = useNavigate();
     function handleLogout(){
@@ -39,19 +43,27 @@ function Info(){
         }
     }
 
-    async function handleFetch(region){
-        const pDescr = document.querySelector(".descr");
-        const city_name = document.querySelector(".city_name");
-        const descData = await fetchDataFromFirebase(region);
-        pDescr.textContent = JSON.parse(descData);
-        city_name.textContent = region;
-    }
+    useEffect(() => {
+        fetchDataFromFirebase("Lovech")// TODO: Region add in place of lovech
+            .then(res => {
+                setData(res);
+            })
+            .catch(error => {
+                console.error("Error fetching! ", error);
+                setError(error);
+            })
+            .finally(() => {
+                setLoading(false);
+            });
+    }, []);
 
     function goToBooking(){
         var Location = "Sofia";
         window.location.href = `https://www.booking.com/search?location=${Location}`;
     }
 
+    if (loading) return "Loading...";
+    if (error) return "Error!";
     return(
       <div className={"flexcol"}>
           <header className={"header-nav"}>
@@ -64,16 +76,8 @@ function Info(){
           </header>
           <h1 className={"city_name"}></h1>
           <div className={"flex"}>
-              <p>
-                Lorem ipsum dolor sit amet
-              </p>
+              <p>{JSON.stringify(data,null,2)}</p>
               <img src={doge} alt={"dog"}/>
-          </div>
-          <div className={"flex"}>
-              <img src={doge} alt={"dog"} />
-              <p>
-                  Lorem ipsum dolor sit amet
-              </p>
           </div>
           <button onClick={goToBooking}>Reserve</button>
       </div>

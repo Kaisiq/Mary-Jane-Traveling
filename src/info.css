@@ -1,5 +1,6 @@
 body{
     overflow: auto;
+    height: 100vh;
 }
 header{
     justify-content: flex-end;
@@ -14,12 +15,16 @@ header{
     margin-inline: auto;
     display:flex;
     width: 90%;
+    gap: 25px;
     flex:1;
 }
 
 .flex img{
     width:50%;
+    border-radius: 15px;
 }
 .flex p{
     width:50%;
+    font-size: 1.75rem;
+    text-align: justify;
 }
