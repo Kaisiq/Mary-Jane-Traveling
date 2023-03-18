@@ -51,6 +51,10 @@ code {
     height: 100vh;
     background: #13132b;
 }
+.error-message{
+    float: right;
+    transform: translateX(50%)
+}
 .background{
     position: absolute;
     width:100vh;

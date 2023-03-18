@@ -24,6 +24,10 @@ function LoginForm() {
     setIsRegistering(!isRegistering);
   }
 
+  const showError = () => {
+
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const auth = getAuth();
@@ -41,11 +45,13 @@ function LoginForm() {
               navigate('/ChooseActivites')
             })
             .catch((error) => {
+              showError();
               console.error('Error logging in user:', error);
             });
 
         })
         .catch((error) => {
+          showError();
           console.error('Error registering user:', error);
         });
     } else {
@@ -57,6 +63,7 @@ function LoginForm() {
           setTimeout(function () { navigate('/ChooseActivities') }, 500);
         })
         .catch((error) => {
+          showError();
           console.error('Error logging in user:', error);
         });
     }
@@ -82,6 +89,7 @@ function LoginForm() {
 
        
       }).catch((error) => {
+        showError();
         // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -106,6 +114,7 @@ function LoginForm() {
 
         navigate('/ChooseActivities')
       }).catch((error) => {
+        showError();
         // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -131,6 +140,7 @@ function LoginForm() {
   return (
     <div className='login-form'>
       <div id={"map"} className={'background'}></div>
+      <div className={"error-message"}>Не съществува акаунт с тези име и парола</div>
       <form onSubmit={handleSubmit}>
         <h2>{isRegistering ? 'Регистрация' : 'Влизане'}</h2>
         <label>
