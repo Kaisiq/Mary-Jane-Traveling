@@ -2,10 +2,8 @@ import React,{useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Login from "./Components/Login";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
 import firebase from './firebase';
+import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
 import './login.css'
 
 
@@ -20,25 +18,37 @@ function LoginForm(){
     const handlePasswordChange = (event) => {
       setPassword(event.target.value);
     };
-    
+    function toggleRegister(){
+     setIsRegistering(!isRegistering);
+          }
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        firebase.auth().signInWithEmailAndPassword(email, password)
-          .then((userCredential) => {
-            
-            firebase.firestore().collection('users').doc(userCredential.user.uid).set({
-              email: userCredential.user.email,
-              displayName: userCredential.user.displayName,
-              photoURL: userCredential.user.photoURL,
-            });
-          })
-          .catch((error) => {
-            console.log(error.message);
-          });
-      };
-      function toggleRegister(){
-        setIsRegistering(!isRegistering);
-      }
+        const auth = getAuth();
+    if (isRegistering) {
+         firebase.auth().createUserWithEmailAndPassword(email, password)
+                       .then((userCredential) => {
+                // User registered successfully
+                console.log(email);
+                const user = userCredential.user;
+                console.log('User registered:', user);
+                
+              })
+              .catch((error) => {
+                console.error('Error registering user:', error);
+              });
+          } else {
+            firebase.auth().signInWithEmailAndPassword(email, password)
+              .then((userCredential) => {
+                // User logged in successfully
+                const user = userCredential.user;
+                console.log('User logged in:', user);
+              })
+              .catch((error) => {
+                console.error('Error logging in user:', error);
+              });
+          }
+        }
     return (
     <div className='login-form'>
         <div className={'background'}></div>
