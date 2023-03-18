@@ -4,6 +4,17 @@
     align-items: center;
     height: 100vh;
 }
+.flex{
+    display:flex;
+}
+.small-img{
+    border-radius: 50%;
+}
+.small-img img {
+    width:25px;
+    height:25px;
+    border-radius: 50%;
+}
 .login-form {
     display: flex;
     flex-direction: column;
