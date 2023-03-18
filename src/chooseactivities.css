@@ -1,0 +1,74 @@
+body{
+    background: #1b1b38;
+    color:white;
+}
+
+h2{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.fav-entertainments{
+    display:flex;
+    flex-wrap: wrap;
+    gap:10px;
+    width:100%;
+    height:75vh;
+
+    justify-content: center;
+}
+.box{
+    border-radius: 15px;
+    width:19%;
+    height:300px;
+    color:white;
+    font-size: 3rem;
+    font-weight: bold;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /*gap: 5px;*/
+    background-position: center center;
+    background-size:cover;
+}
+
+.music{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)), url(../media/music.jpg);
+}
+.theatre{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)), url(../media/theatre.jpg);
+}
+.hiking{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)), url(../media/hiking.jpg);
+}
+.sport{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)), url(../media/sport.jpg);
+}
+.museum{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)), url(../media/museum.jpg);
+}
+.videogames{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)), url(../media/videogames.jpg);
+}
+.art{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)), url(../media/art.jpg);
+}
+.films{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)), url(../media/films.jpg);
+}
+.sightseeing{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)), url(../media/sightseeing.jpg);
+}
+.clubbing{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)), url(../media/clubbing.jpg);
+}
