@@ -49,7 +49,7 @@ code {
     align-content: center;
     vertical-align: middle;
     height: 100vh;
-    background: #1b1b38;
+    background: #13132b;
 }
 .background{
     position: absolute;
@@ -93,6 +93,9 @@ code {
 
 .login-form input {
     margin: 10px;
+    font-size: 1rem;
+    text-align: center;
+    background: #faf7ff;
     padding: 10px;
     border-radius: 15px;
     border: 1px solid #ccc;
@@ -106,6 +109,11 @@ code {
 .login-form input::placeholder{
     text-align: center;
     font-size: 1rem;
+}
+.login-form input:-webkit-autofill{
+    font-size: 1rem;
+    background: #faf7ff;
+    text-align: center;
 }
 
 .login-form form button{
