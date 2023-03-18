@@ -123,12 +123,9 @@ function LoginForm() {
 
   return (
     <div className='login-form'>
-      <div id="fb-root"></div>
-      <script async defer crossOrigin="anonymous"
-        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0" nonce="rqvBXiYe"></script>
       <div id={"map"} className={'background'}></div>
-      <h2>{isRegistering ? 'Регистрация' : 'Влизане'}</h2>
       <form onSubmit={handleSubmit}>
+        <h2>{isRegistering ? 'Регистрация' : 'Влизане'}</h2>
         <label>
           Email:
         </label>
@@ -138,19 +135,20 @@ function LoginForm() {
         </label>
         <input type="password" value={password} placeholder={"your password"} onChange={handlePasswordChange} />
         <button onClick={zoomin} type="submit">{isRegistering ? 'Регистриране' : 'Влизане'}</button>
+        <div className={"flex"}>
+          <button onClick={toggleRegister}>
+            {isRegistering ? 'Вече имаш акаунт?' : 'Регистрация'}
+          </button>
+          <button>
+            Админ
+          </button>
+        </div>
+        <div className={"flex"}>
+          <button className={"small-img"}><img src={fblogo} alt={"fblogo"} /></button>
+          <button className={"small-img"}><img src={googlelogo} alt={"googlelogo"} onClick={handleGoogleSubmit} /></button>
+        </div>
       </form>
-      <div className={"flex"}>
-        <button onClick={toggleRegister}>
-          {isRegistering ? 'Вече имаш акаунт?' : 'Регистрация'}
-        </button>
-        <button>
-          Админ
-        </button>
-      </div>
-      <div className={"flex"}>
-        <button className={"small-img"}><img src={fblogo} alt={"fblogo"} /></button>
-        <button className={"small-img"}><img src={googlelogo} alt={"googlelogo"} onClick={handleGoogleSubmit} /></button>
-      </div>
+
     </div>
   );
 }
