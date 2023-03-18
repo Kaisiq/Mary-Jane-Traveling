@@ -57,7 +57,10 @@ function Logged(){
     async function addLiToUl(ulist, region, from){
         var data = await fetchDataFromFirebase(region + `/Activities/${from}/name`);
         var li = document.createElement("li");
+        var checkbox = document.createElement("input");
+        checkbox.setAttribute("type", "checkbox");
         li.textContent = JSON.parse(data);
+        li.appendChild(checkbox);
         if(li.textContent !== "") {
             ulist.appendChild(li);
         }
