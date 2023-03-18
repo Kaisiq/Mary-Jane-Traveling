@@ -134,6 +134,10 @@ code {
     margin-inline: auto;
 }
 
+.login-form .flex button{
+    width:auto;
+}
+
 .login-form button {
     margin: 10px;
     padding: 10px;
@@ -337,6 +341,7 @@ h2{
 }
 
 .darken {
+    transition: 0.3s ease-in-out;
     filter: brightness(60%);
 }
 
