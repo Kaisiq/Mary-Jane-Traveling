@@ -28,7 +28,7 @@ function LoginForm() {
     var err = document.getElementById("error-msg");
     err.style.transform = "translateX(110%)";
   }
-  const showError = () => {
+  const showError = (errorMsg) => {
     var err = document.getElementById("error-msg");
     err.style.transform = "translateX(0%)";
     var myImg = document.getElementById("map");
@@ -103,7 +103,7 @@ function LoginForm() {
           state: {uid: user.uid}})
             
       }).catch((error) => {
-        showError();
+        showError(error);
       });
   }
 
