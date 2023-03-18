@@ -2,7 +2,7 @@ import './styles.css'
 import React, { useState } from 'react'
 import reportWebVitals from './reportWebVitals'
 import firebase from './firebase'
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, getAdditionalUserInfo } from "firebase/auth"
+import { getAuth, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider} from "firebase/auth"
 import { useNavigate } from "react-router-dom"
 import fblogo from './media/facebook.webp'
 import googlelogo from './media/google.png'
@@ -38,7 +38,7 @@ function LoginForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const auth = getAuth();
+    
     if (isRegistering) {
       firebase.auth().createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
@@ -79,40 +79,30 @@ function LoginForm() {
     }
   }
 
-  const handleGoogleSubmit = async () => {
-    const provider = new GoogleAuthProvider();
-    provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+  const handleSocialSubmit = async (provider) => {
+
+    if (provider instanceof GoogleAuthProvider){
+      provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+    } 
 
     const auth = getAuth();
     signInWithPopup(auth, provider)
       .then((result) => {
         // This gives you a Google Access Token. You can use it to access the Google API.
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
+        //const credential = provider.credentialFromResult(result);
+        
         // The signed-in user info.
         const user = auth.currentUser;
         fetchUserData(user.uid)
         navigate('/ChooseActivities',{
           state: {uid: user.uid}})
             
-        // IdP data available using getAdditionalUserInfo(result)
-        // ..
-
-       
       }).catch((error) => {
         showError();
-        // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // The email of the user's account used.
-        const email = error.customData.email;
-        // The AuthCredential type that was used.
-        const credential = GoogleAuthProvider.credentialFromError(error);
-        // ...
       });
   }
 
- async function fetchUserData(userUid){
+  async function fetchUserData(userUid){
   const database = firebase.database();
     try{
       const userDataCatsRef = database.ref(`Users/${userUid}/cats`)
@@ -128,31 +118,6 @@ function LoginForm() {
         console.log("Error getting user data:", error);
     }
  }
-
-  const handleFacebookSubmit = async () => {
-    const provider = new FacebookAuthProvider();
-    const auth = getAuth();
-
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        const credential = FacebookAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
-        const user = result.user;
-        
-        navigate('/ChooseActivities',{
-          state: {uid: user.uid}})
-      }).catch((error) => {
-        showError();
-        // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // The email of the user's account used.
-        const email = error.customData.email;
-        // The AuthCredential type that was used.
-        const credential = FacebookAuthProvider.credentialFromError(error);
-        // ...
-      });
-  }
 
   const zoomin = () => {
     var myImg = document.getElementById("map");
@@ -188,11 +153,11 @@ function LoginForm() {
             Админ
           </button>
         </div>
-        <div className={"flex"}>
-          <button className={"small-img"}><img src={fblogo} alt={"fblogo"} onClick={function(){zoomin();handleFacebookSubmit();}} /></button>
-          <button className={"small-img"}><img src={googlelogo} alt={"googlelogo"} onClick={function(){zoomin();handleGoogleSubmit();}} /></button>
-        </div>
       </form>
+        <div className={"flex"}>
+          <button className={"small-img"}><img src={fblogo} alt={"fblogo"} onClick={function(){zoomin();handleSocialSubmit(new FacebookAuthProvider());}} /></button>
+          <button className={"small-img"}><img src={googlelogo} alt={"googlelogo"} onClick={function(){zoomin();handleSocialSubmit(new GoogleAuthProvider());}} /></button>
+        </div>
     </div>
   );
 }
