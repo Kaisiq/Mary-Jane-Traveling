@@ -22,12 +22,12 @@ function Logged(){
 
     function handleLogout(){
         firebase.auth().signOut()
-        .then(() => {
-            console.log("Sign out successful.");
-        })
-        .catch((error) => {
-            console.log("Sign out unsuccessful");
-        })
+            .then(() => {
+                console.log("Sign out successful.");
+            })
+            .catch((error) => {
+                console.log("Sign out unsuccessful");
+            })
         navigate('/');
     }
 
