@@ -76,7 +76,7 @@ function LoginForm() {
         // IdP data available using getAdditionalUserInfo(result)
         // ...
 
-        navigate('/Logged')
+        navigate('/ChooseActivities')
       }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
@@ -99,7 +99,7 @@ function LoginForm() {
         const token = credential.accessToken;
         const user = result.user;
 
-        navigate('/Logged')
+        navigate('/ChooseActivities')
       }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;

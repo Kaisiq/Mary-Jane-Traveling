@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom/client'
 import reportWebVitals from './reportWebVitals'
 import LoginForm from './login'
 import Logged from "./Components/Logged"
-import ChooseActivites from './Components/ChooseActivites'
+import ChooseActivites from './Components/ChooseActivities'
 import AdditionalInfo from './Components/AdditionalInfo'
 
 import {
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     element: <Logged />
   },
   {
-    path: "/ChooseActivites",
+    path: "/ChooseActivities",
     element: <ChooseActivites />
   },
   {
