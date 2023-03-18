@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import firebase from './firebase';
-import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,signInWithPopup,GoogleAuthProvider } from "firebase/auth";
 import { redirect, useParams } from "react-router-dom";
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from "react-router-dom";
 import './login.css'
 import fblogo from './media/facebook.webp'
@@ -17,7 +18,8 @@ function LoginForm(){
     const [password,setPassword] = useState('');
     const [isRegistering, setIsRegistering] = useState(false);
     const navigate = useNavigate();
-    
+    const provider = new GoogleAuthProvider();
+    provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
     
     const handleEmailChange = (event) =>{
       setEmail(event.target.value);
@@ -70,6 +72,34 @@ function LoginForm(){
           }
         }
 
+
+    const handleGoogleSubmit = async() =>{
+      const auth = getAuth();
+      signInWithPopup(auth, provider)
+      .then((result) => {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+        // IdP data available using getAdditionalUserInfo(result)
+        // ...
+      }).catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
+      });
+    }
+     
+  
+
+    
+
     const zoomin = () => {
         var myImg = document.getElementById("map");
         var currTransform = myImg.style.transform;
@@ -110,12 +140,14 @@ function LoginForm(){
         </div>
         <div className={"flex"}>
             <button className={"small-img"}><img src={fblogo} alt={"fblogo"} /></button>
-            <button className={"small-img"}><img src={googlelogo} alt={"googlelogo"}/></button>
+            <button className={"small-img"}><img src={googlelogo} alt={"googlelogo"} onClick={handleGoogleSubmit}/></button>
         </div>
       </div>
     );
   }
   export default LoginForm;
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
