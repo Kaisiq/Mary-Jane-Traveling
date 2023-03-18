@@ -60,7 +60,7 @@ function LoginForm(){
                 // User logged in successfully
                 const user = userCredential.user;
                 console.log('User logged in:', user);
-                navigate('/Logged');
+                setTimeout(function() {navigate('/Logged')}, 500);
               })
               .catch((error) => {
                 console.error('Error logging in user:', error);

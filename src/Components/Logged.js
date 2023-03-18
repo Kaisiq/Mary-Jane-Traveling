@@ -34,6 +34,12 @@ function Logged(){
     function goToInfo(){
         navigate('/Info');
     }
+
+    function goToBooking(){
+        
+    }
+
+
 // Function to fetch data from Firebase and return as JSON
     async function fetchDataFromFirebase(region) {
         try {
@@ -123,7 +129,7 @@ function Logged(){
                     <button onClick={goToInfo}>info</button>
                 </div>
                 <p className={"descr"}>Lorem ipsum dolor sit amet</p>
-                <button>reserve</button>
+                <button  onClick = {goToBooking}>reserve</button>
             </div>
         </div>
     );
