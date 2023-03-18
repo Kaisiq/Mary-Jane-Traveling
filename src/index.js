@@ -8,13 +8,35 @@ import Logged from "./Components/Logged";
 import './login.css'
 import firebaseConfig from './firebase';
 import firebase from './firebase';
-import StartPage from "./Components/StartPage";
+import ChooseActivites from './Components/ChooseActivites';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 
-const isLogged = false;
+
+
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LoginForm/>
+  },
+  {
+    path: "/Logged",
+    element: <Logged/>
+  },
+  {
+    path: "/ChooseActivites",
+    element: <ChooseActivites/>
+  },
+]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <StartPage />
+    <RouterProvider router={router} />
   </React.StrictMode>
 )
 // export default placeHolderName;

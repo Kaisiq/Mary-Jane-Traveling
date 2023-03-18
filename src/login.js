@@ -4,15 +4,19 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import firebase from './firebase';
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
+import { redirect, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import './login.css'
 
 
 
-function LoginForm({onLogin,onRegister}){
+function LoginForm(){
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
     const [isRegistering, setIsRegistering] = useState(false);
-
+    const navigate = useNavigate();
+    
+    
     const handleEmailChange = (event) =>{
       setEmail(event.target.value);
     }
@@ -23,7 +27,7 @@ function LoginForm({onLogin,onRegister}){
      setIsRegistering(!isRegistering);
           }
 
-    let registeringForFirstTime = false;
+    
     const handleSubmit = (event) => {
         event.preventDefault();
         const auth = getAuth();
@@ -38,12 +42,12 @@ function LoginForm({onLogin,onRegister}){
                 .then((userLoggedInCredential) => {
                 const user = userLoggedInCredential.user;
                 console.log('User logged in:', user);
-                onRegister()
+                
               })
               .catch((error) => {
                 console.error('Error logging in user:', error);
               });
-
+              navigate('/ChooseActivites')
               })
               .catch((error) => {
                 console.error('Error registering user:', error);
@@ -54,11 +58,13 @@ function LoginForm({onLogin,onRegister}){
                 // User logged in successfully
                 const user = userCredential.user;
                 console.log('User logged in:', user);
-                onLogin();
+                
               })
               .catch((error) => {
                 console.error('Error logging in user:', error);
               });
+
+             navigate('/Logged');
           }
         }
 

@@ -1,14 +1,15 @@
 import React,{useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from '../reportWebVitals';
-import { useNavigate,Router } from 'react-router-dom';
 import firebase from '../firebase';
+import { useNavigate } from "react-router-dom";
 import '../chooseactivities.css';
 
 
-function ChooseActivites({onSubmit}){
+function ChooseActivites(){
     const [checkedItems, setCheckedItems] = useState({});
     const [isConfirmed, setConfirm] = useState(false);
+    const navigate = useNavigate();
     const handleChange = (event) => {
       setCheckedItems({
         ...checkedItems,
@@ -16,7 +17,7 @@ function ChooseActivites({onSubmit}){
       });
     };
     const handleConfirmation = () =>{
-      onSubmit()
+      navigate('/Logged');
     }
   
     return (
