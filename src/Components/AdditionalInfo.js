@@ -1,5 +1,5 @@
 import firebase from '../firebase';
-import '../info.css';
+import '../styles.css';
 import {useNavigate} from "react-router-dom";
 import doge from '../media/default-profile-picture.jpg';
 import {useState, useEffect} from "react";
@@ -73,11 +73,11 @@ function Info(){
               </button>
           </header>
           <h1 className={"city_name"}></h1>
-          <div className={"flex"}>
+          <div className={"flex-info"}>
               <p>{JSON.stringify(data,null,2)}</p>
               <img src={doge} alt={"dog"}/>
           </div>
-          <button onClick={goToBooking}>Reserve</button>
+          <button className={"reserve"} onClick={goToBooking}>Reserve</button>
       </div>
     );
 

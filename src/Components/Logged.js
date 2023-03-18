@@ -1,8 +1,7 @@
 import React, {useEffect, useRef} from 'react';
-import '../index.css';
+import '../styles.css';
 import reportWebVitals from '../reportWebVitals';
 import firebase from '../firebase';
-import '../logged.css';
 import {useNavigate} from "react-router-dom";
 
 
