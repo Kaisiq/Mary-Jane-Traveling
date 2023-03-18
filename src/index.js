@@ -8,14 +8,13 @@ import Logged from "./Components/Logged";
 import './login.css'
 import firebaseConfig from './firebase';
 import firebase from './firebase';
+import StartPage from "./Components/StartPage";
 
 const isLogged = false;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <div className='login-box-container'>
-        {isLogged ? <Logged/> : <LoginForm/>}
-    </div>
+    <StartPage/>
   </React.StrictMode>
 )
 // export default placeHolderName;
