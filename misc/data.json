@@ -1,0 +1,424 @@
+{
+    "RegionData": {
+      "Lovech": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Blagoevgrad": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Burgas": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Varna": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Veliko Tarnovo": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Vidin": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Vratsa": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Gabrovo": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Dobrich": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Kardzhali": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Kyustendil": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Montana": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Pazardzhik": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Pernik": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Pleven": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Plovdiv": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Razgrad": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Ruse": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Silistra": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Sliven": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Smolyan": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Sofia": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Sofia Province": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Stara Zagora": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Targovishte": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Haskovo": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Shumen": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      },
+      "Yambol": {
+        "Activities": {
+          "art": "",
+          "clubbing": "",
+          "films": "",
+          "games": "",
+          "hiking": "",
+          "museums": "",
+          "music": "",
+          "sightseeing": "",
+          "sport": "",
+          "theatre": ""
+        },
+        "Desc": ""
+      }
+    }
+  }
