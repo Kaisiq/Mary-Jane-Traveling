@@ -47,8 +47,9 @@ function Info(){
         city_name.textContent = region;
     }
 
-    const goToBooking = () => {
-
+    function goToBooking(){
+        var Location = "Sofia";
+        window.location.href = `https://www.booking.com/search?location=${Location}`;
     }
 
     return(
