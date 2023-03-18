@@ -4,14 +4,16 @@ import './index.css';
 import App from './Components/App';
 import reportWebVitals from './reportWebVitals';
 import LoginForm from './login';
+import './login.css'
 import firebaseConfig from './firebase';
 import firebase from './firebase';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <h1>Login Page</h1>
+    <div className='login-box-container'>
     <LoginForm/>  
+    </div>
   </React.StrictMode>
 )
 // export default placeHolderName;

@@ -12,6 +12,7 @@ import './login.css'
 function LoginForm(){
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
+    const [isRegistering, setIsRegistering] = useState(false);
   
     const handleEmailChange = (event) =>{
       setEmail(event.target.value);
@@ -35,9 +36,12 @@ function LoginForm(){
             console.log(error.message);
           });
       };
-  
+      function toggleRegister(){
+        setIsRegistering(!isRegistering);
+      }
     return (
     <div className='login-form'>
+        <h2>{isRegistering ? 'Register' : 'Login'}</h2>
       <form onSubmit={handleSubmit}>
         <label>
           Email:
@@ -47,8 +51,11 @@ function LoginForm(){
           Password:
           <input type="password" value={password} onChange={handlePasswordChange} />
         </label>
-        <button type="submit">Sign In</button>
+        <button type="submit">{isRegistering ? 'Register' : 'Login'}</button>
       </form>
+      <button onClick={toggleRegister}>
+        {isRegistering ? 'Already have an account?' : 'Register'}
+      </button>
       </div>
     );
   }
