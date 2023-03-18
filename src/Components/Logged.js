@@ -22,18 +22,24 @@ function Logged(){
 
     function handleLogout(){
         firebase.auth().signOut()
-        .then(() => {
-            console.log("Sign out successful.");
-        })
-        .catch((error) => {
-            console.log("Sign out unsuccessful");
-        })
+            .then(() => {
+                console.log("Sign out successful.");
+            })
+            .catch((error) => {
+                console.log("Sign out unsuccessful");
+            })
         navigate('/');
     }
 
     function goToInfo(){
         navigate('/Info');
     }
+
+    function goToBooking(Location){
+        const bookingSearchUrl = `https://www.booking.com/search?location=${Location}`;
+        window.location.href = bookingSearchUrl;
+    }
+
 
 // Function to fetch data from Firebase and return as JSON
     async function fetchDataFromFirebase(region) {
@@ -124,7 +130,9 @@ function Logged(){
                     <button onClick={goToInfo}>info</button>
                 </div>
                 <p className={"descr"}>Lorem ipsum dolor sit amet</p>
-                <button>reserve</button>
+                <div>
+                    <button  onClick = {goToBooking("Sofia")}>reserve</button>
+                </div>
             </div>
         </div>
     );

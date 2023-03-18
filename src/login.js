@@ -1,5 +1,4 @@
-import React,{useState} from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { useState } from 'react';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import firebase from './firebase';
@@ -31,16 +30,19 @@ function LoginForm(){
      setIsRegistering(!isRegistering);
           }
 
-    
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const auth = getAuth();
+
+  
+
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const auth = getAuth();
     if (isRegistering) {
-         firebase.auth().createUserWithEmailAndPassword(email, password)
-                       .then((userCredential) => {
-                console.log(email);
-                const user = userCredential.user;
-                console.log('User registered:', user);
+      firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          console.log(email);
+          const user = userCredential.user;
+          console.log('User registered:', user);
 
               firebase.auth().signInWithEmailAndPassword(email, password)
                 .then((userLoggedInCredential) => {
@@ -62,16 +64,13 @@ function LoginForm(){
                 // User logged in successfully
                 const user = userCredential.user;
                 console.log('User logged in:', user);
-                navigate('/Logged');
+                setTimeout(function() {navigate('/Logged')}, 500);
               })
               .catch((error) => {
                 console.error('Error logging in user:', error);
               });
-
-             
+            }
           }
-        }
-
 
     const handleGoogleSubmit = async() =>{
       const auth = getAuth();
@@ -100,35 +99,57 @@ function LoginForm(){
 
     
 
-    const zoomin = () => {
-        var myImg = document.getElementById("map");
-        var currTransform = myImg.style.transform;
-        if (currTransform) {
-            myImg.style.transform = '';
-        }
-        else {
-            myImg.style.transform = 'scale(5,5)';
-        }
+  
+  const zoomin = () => {
+    var myImg = document.getElementById("map");
+    var currTransform = myImg.style.transform;
+    if (currTransform) {
+      myImg.style.transform = '';
     }
+    else {
+      myImg.style.transform = 'scale(5,5)';
+    }
+  }
 
 
-    return (
+  const [user, loading, error] = useAuthState(firebase.auth());
+  const handleFacebook = async () => {
+    try {
+      const provider = new firebase.auth.FacebookAuthProvider();
+      await firebase.auth().signInWithPopup(provider);
+
+      navigate('/Logged')
+    } catch (error) {
+      console.error(error);
+    }
+  
+    
+  if (loading) {
+    alert("Loading...");
+  }
+
+  if (error) {
+    alert("An error occured while connecting to facebook.")
+  };
+  };
+
+  return (
     <div className='login-form'>
-        <div id="fb-root"></div>
-        <script async defer crossOrigin="anonymous"
-                src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0" nonce="rqvBXiYe"></script>
-        <div id={"map"} className={'background'}></div>
-        <h2>{isRegistering ? 'Регистрация' : 'Влизане'}</h2>
+      <div id="fb-root"></div>
+      <script async defer crossOrigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0" nonce="rqvBXiYe"></script>
+      <div id={"map"} className={'background'}></div>
+      <h2>{isRegistering ? 'Регистрация' : 'Влизане'}</h2>
       <form onSubmit={handleSubmit}>
         <label>
           Email:
         </label>
-          <input type="email" value={email} placeholder={"your@email.com"} onChange={handleEmailChange} />
+        <input type="email" value={email} placeholder={"your@email.com"} onChange={handleEmailChange} />
         <label>
           Password:
         </label>
-          <input type="password" value={password} placeholder={"your password"} onChange={handlePasswordChange} />
-          <button onClick={zoomin} type="submit">{isRegistering ? 'Регистриране' : 'Влизане'}</button>
+        <input type="password" value={password} placeholder={"your password"} onChange={handlePasswordChange} />
+        <button onClick={zoomin} type="submit">{isRegistering ? 'Регистриране' : 'Влизане'}</button>
       </form>
         <div className={"flex"}>
       <button onClick={toggleRegister}>
@@ -143,9 +164,9 @@ function LoginForm(){
             <button className={"small-img"}><img src={googlelogo} alt={"googlelogo"} onClick={handleGoogleSubmit}/></button>
         </div>
       </div>
-    );
-  }
-  export default LoginForm;
+  );
+}
+export default LoginForm;
 
 
 

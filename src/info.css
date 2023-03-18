@@ -1,0 +1,25 @@
+body{
+    overflow: auto;
+}
+header{
+    justify-content: flex-end;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.flexcol{
+    display:flex;
+    flex-direction: column;
+}
+.flex{
+    margin-inline: auto;
+    display:flex;
+    width: 90%;
+    flex:1;
+}
+
+.flex img{
+    width:50%;
+}
+.flex p{
+    width:50%;
+}
