@@ -56,8 +56,7 @@ function Info(){
     }, []);
 
     function goToBooking(){
-        var Location = "Sofia";
-        window.location.href = `https://www.booking.com/searchresults.bg.html?ss=${Location}`;
+        window.location.href = `https://www.booking.com/searchresults.bg.html?ss=${state.location}`;
     }
 
     if (loading) return "Loading...";
