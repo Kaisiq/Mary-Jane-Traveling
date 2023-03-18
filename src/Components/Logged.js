@@ -3,11 +3,7 @@ import '../index.css';
 import reportWebVitals from '../reportWebVitals';
 import firebase from '../firebase';
 import '../logged.css';
-import {register} from 'swiper/element/bundle';
 import {useNavigate} from "react-router-dom";
-
-
-register();
 
 
 
@@ -68,41 +64,7 @@ function Logged(){
         city_name.textContent = region;
     }
 
-    async function testFetch(){
-        handleFetch("Lovech");
-    }
 
-
-
-
-
-
-    const swiperElRef = useRef(null);
-
-    useEffect(() => {
-        // listen for Swiper events using addEventListener
-        swiperElRef.current.addEventListener('progress', (e) => {
-            const [swiper, progress] = e.detail;
-            console.log(progress);
-        });
-        const params = {
-            // array with CSS styles
-            injectStyles: [
-                `
-      :host(.red) .swiper-wrapper {
-        background-color: red;
-      }
-      `,
-            ],
-
-            // array with CSS urls
-            injectStylesUrls: ['logged.css'],
-        };
-
-        swiperElRef.current.addEventListener('slidechange', (e) => {
-            console.log('slide changed');
-        });
-    }, []);
     return (
         <div className='main-screen'>
             <header className={"header-nav"}>
@@ -115,16 +77,7 @@ function Logged(){
             </header>
             <div className='small-info'>
                 <h2 className={"city_name"}>Sofia</h2>
-                <swiper-container
-                    ref={swiperElRef}
-                    slides-per-view="1"
-                    navigation="true"
-                    pagination="true"
-                >
-                    <swiper-slide>Slide 1</swiper-slide>
-                    <swiper-slide>Slide 2</swiper-slide>
-                    <swiper-slide>Slide 3</swiper-slide>
-                </swiper-container>
+                <img src={""} alt={""}/>
                 <div className={'buttons'}>
                     <button>video</button>
                     <button onClick={goToInfo}>info</button>
