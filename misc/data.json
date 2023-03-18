@@ -1,424 +1,1544 @@
 {
     "RegionData": {
-      "Lovech": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Lovech": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "Кино Космос",
+                    "desc": "",
+                    "url": "https://www.facebook.com/profile.php?id=100057436698222"
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "Музей „Васил Левски”",
+                    "desc": "Музей „Васил Левски” води своето начало от средата на ХХ век. Екип от родолюбиви българи създава първата експозиция на 19 февруари 1954 г. От тогава е обогатявана четири пъти. Днес се помещава в специално построената сграда открита през 1967 г. Експозицията е разположена на две нива. Отразява борбите на българите за национално освобождение,  дейността на Левски в Българско, Ловешкия частен революционен комитет и ролята му на централен за вътрешността на страната, Новоселското въстание (1876), Първото и Второто освобождение на Ловеч през Руско-турската война (1877-1878).",
+                    "url": "https://lovech-museum.bg/muzei-vasil-levski/"
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": "Ловеч е едно от най-старите населени места в България. Следите от човешка дейност датират от най-дълбока древност, за което решаваща роля играе благоприятното разположение на града между планината и равнината, както и наличието на река. Откритите в ловешките пещери останки свидетелстват за активно човешко присъствие от старокаменната, новокаменната, бронзовата и желязната епоха. През IV–III в. пр. Хр. тук живеят траките."
         },
-        "Desc": ""
-      },
-      "Blagoevgrad": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Blagoevgrad": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Burgas": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Burgas": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Varna": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Varna": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Veliko Tarnovo": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Veliko Tarnovo": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Vidin": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Vidin": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Vratsa": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Vratsa": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Gabrovo": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Gabrovo": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Dobrich": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Dobrich": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Kardzhali": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Kardzhali": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Kyustendil": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Kyustendil": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Montana": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Montana": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Pazardzhik": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Pazardzhik": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Pernik": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Pernik": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Pleven": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Pleven": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "Кино Арена",
+                    "desc": "",
+                    "url": "https://www.kinoarena.com/bg/cinema/kino-arena-panorama-mall-pleven"
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "Панорама \"Плевенска епопея-1877 година\"",
+                    "desc": "През 1977 г. по повод 100-годишнината от освобождението на Плевен, на самото бойно поле, в Скобелев парк музей, е изградена панорама “Плевенска епопея 1877 г. Автори на архитектурния проект  са Пламена Цачева и Иво Петров с проектантски колектив. Строителството на паметника започва на 19 януари 1977 г.. Тържественото му откриване е на 10 декември 1977 г., в деня на стогодишнината от освобождението на Плевен.",
+                    "url": "https://www.pleven.bg/bg/zabelezhitelnosti-pametnitsi-i-muzei/panorama-plevenska-epopeya-1877-g/"
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": "В началото на новата ера тези земи стават част от Римската империя. На пътя от Ескус за Филипополис при днешния Плевен възниква римската пътна станция Сторгозия, а по-късно и крепост със същото име. Археологическите проучвания говорят за едромащабно строителство на административни, военни и религиозни постройки. Един от най-ценните археологически паметници, запазен до днес, е раннохристиянската базиликална църква от 4 век, втората по големина в България след голямата царска базилика в Плиска."
         },
-        "Desc": ""
-      },
-      "Plovdiv": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Plovdiv": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "CinemaCity Пловдив",
+                    "desc": "",
+                    "url": "https://www.cinemacity.bg/cinemas/plovdiv/"
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "Регионален природонаучен музей",
+                    "desc": "Природонаучния музей в Пловдив е създаден на база на изключително богатата и разнообразна експозиция, с която е разполагал съществувалият до средата на 19 век френски колеж Св. Августин – Le college St. Augustin, Рhiliророl.",
+                    "url": "https://old.rnhm.org/bg/home"
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": "Пловдив е град на над 8000 години, чието минало може да се проследи от праисторията до наши дни. Първите неолитни поселения в границите на днешния град започват от VI хилядолетие пр.н.е., а от каменно-медната епоха (IV-III хилядолетие пр.н.е.) животът в града не е прекъсвал, което го нарежда сред най-древните постоянно обитавани градове в света. Запазени и консервирани са древни паметници като античния театър, римския одеон, агората (римския форум), римския стадион, късноантична сграда „Ейрене“, епископската базилика, малката базилика и други."
         },
-        "Desc": ""
-      },
-      "Razgrad": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Razgrad": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Ruse": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Ruse": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Silistra": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Silistra": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Sliven": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Sliven": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Smolyan": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Smolyan": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Sofia": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Sofia": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Sofia Province": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Sofia Province": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Stara Zagora": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Stara Zagora": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Targovishte": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Targovishte": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Haskovo": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Haskovo": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Shumen": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
+        "Shumen": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
         },
-        "Desc": ""
-      },
-      "Yambol": {
-        "Activities": {
-          "art": "",
-          "clubbing": "",
-          "films": "",
-          "games": "",
-          "hiking": "",
-          "museums": "",
-          "music": "",
-          "sightseeing": "",
-          "sport": "",
-          "theatre": ""
-        },
-        "Desc": ""
-      }
+        "Yambol": {
+            "Activities": {
+                "art": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "clubbing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "films": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "games": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "hiking": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "museums": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "music": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sightseeing": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "sport": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                },
+                "theatre": {
+                    "name": "",
+                    "desc": "",
+                    "url": ""
+                }
+            },
+            "Desc": ""
+        }
     }
-  }
+}
