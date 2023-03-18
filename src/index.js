@@ -5,6 +5,7 @@ import App from './Components/App';
 import reportWebVitals from './reportWebVitals';
 import LoginForm from './login';
 import Logged from "./Components/Logged";
+import Profile from "./Components/Profile";
 import './login.css'
 import firebaseConfig from './firebase';
 import firebase from './firebase';
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/ChooseActivites",
     element: <ChooseActivites/>
+  },
+  {
+    path: "/Profile",
+    element: <Profile/>
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
