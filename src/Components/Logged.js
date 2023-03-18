@@ -102,14 +102,14 @@ function Logged(){
                 <h2 className={"city_name"}>Sofia</h2>
                 <img src={""} alt={""}/>
                 <div className={'buttons'}>
-                    <button>video</button>
+                    <button onClick={testFetch}>video</button>
                     <button onClick={goToInfo}>info</button>
                 </div>
                 <ul className={"list_activities"}>
                 </ul>
                 {/*<p className={"descr"}>Lorem ipsum dolor sit amet</p>*/}
                 <div>
-                    <button onClick={testFetch}>reserve</button>
+                    <button onClick={goToBooking}>reserve</button>
                 </div>
             </div>
         </div>
