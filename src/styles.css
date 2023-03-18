@@ -336,7 +336,9 @@ h2{
     order:1;
 }
 
-input:checked:before
+.darken {
+    filter: brightness(60%);
+}
 
 
 input[type="checkbox"] {

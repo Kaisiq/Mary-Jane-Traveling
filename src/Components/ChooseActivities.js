@@ -15,11 +15,12 @@ function ChooseActivities(){
         ...checkedItems,
         [event.target.name]: event.target.checked,
       });
+      var toDarken = document.querySelector("."+event.target.name);
+      toDarken.classList.toggle('darken');
     };
-    const handleConfirmation = () =>{
-      navigate('/Logged');
+    const handleConfirmation = () => {
+        navigate('/Logged');
     }
-
     return (
 
       <div className={"content-activities"}>
