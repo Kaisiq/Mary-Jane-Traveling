@@ -1,5 +1,4 @@
 import React, {useEffect, useRef} from 'react';
-import '../index.css';
 import reportWebVitals from '../reportWebVitals';
 import firebase from '../firebase';
 import '../info.css';
@@ -18,6 +17,9 @@ function Info(){
                 console.log("Sign out unsuccessful");
             })
         navigate('/');
+    }
+    function goBack(){
+        navigate('/Logged');
     }
     async function fetchDataFromFirebase(region) {
         try {
@@ -52,6 +54,9 @@ function Info(){
     return(
       <div className={"flexcol"}>
           <header className={"header-nav"}>
+              <button onClick = {goBack}>
+                Back
+              </button>
               <button onClick = {handleLogout}>
                   Logout
               </button>
