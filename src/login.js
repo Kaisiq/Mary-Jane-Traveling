@@ -32,7 +32,15 @@ function LoginForm(){
                 console.log(email);
                 const user = userCredential.user;
                 console.log('User registered:', user);
-                
+              firebase.auth().signInWithEmailAndPassword(email, password)
+                .then((userLoggedInCredential) => {
+                // User logged in successfully
+                const user = userLoggedInCredential.user;
+                console.log('User logged in:', user);
+              })
+              .catch((error) => {
+                console.error('Error logging in user:', error);
+              });
               })
               .catch((error) => {
                 console.error('Error registering user:', error);
