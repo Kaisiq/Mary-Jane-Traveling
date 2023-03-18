@@ -9,14 +9,80 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  
-  .login-form input {
+    height: 100vh;
+    background: #282c34;
+}
+.background{
+    position: absolute;
+    width:100vh;
+    height:100vh;
+    background: url(../media/background_earth.png);
+    background-size: 2000px;
+    border-radius: 50%;
+    box-shadow: inset 8px 36px 80px 36px rgb(0, 0, 0), inset -6px 0 12px 4px rgba(255, 255, 255, 0.3);
+    background-image: -webkit-linear-gradient(-45deg, rgba(255,255,220,.3) 0%, transparent 100%);
+    background-image: -moz-linear-gradient(-45deg, rgba(255,255,220,.3) 0%, transparent 100%);
+    background-image: -o-linear-gradient(-45deg, rgba(255,255,220,.3) 0%, transparent 100%);
+    background-image: -ms-linear-gradient(-45deg, rgba(255,255,220,.3) 0%, transparent 100%);
+    animation-name: rotate;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 16s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+@keyframes rotate {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: 2000px 0px;
+    }
+}
+@-webkit-keyframes rotate {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: 2000px 0px;
+    }
+}
+
+.login-form form, h2, button{
+    z-index: 2;
+}
+
+.login-form h2{
+    font-size: 4rem;
+    color: white;
+    text-shadow: 0 1.5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.login-form form{
+    width: 25%;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.login-form input {
     margin: 10px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 15px;
     border: 1px solid #ccc;
-  }
+}
+.login-form label{
+    color:white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.login-form input::placeholder{
+    text-align: center;
+    font-size: 1rem;
+}
   
   .login-form button {
     margin: 10px;

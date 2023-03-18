@@ -41,20 +41,21 @@ function LoginForm(){
       }
     return (
     <div className='login-form'>
-        <h2>{isRegistering ? 'Register' : 'Login'}</h2>
+        <div className={'background'}></div>
+        <h2>{isRegistering ? 'Регистрация' : 'Влизане'}</h2>
       <form onSubmit={handleSubmit}>
         <label>
           Email:
-          <input type="email" value={email} onChange={handleEmailChange} />
         </label>
+          <input type="email" value={email} placeholder={"your@email.com"} onChange={handleEmailChange} />
         <label>
           Password:
-          <input type="password" value={password} onChange={handlePasswordChange} />
         </label>
-        <button type="submit">{isRegistering ? 'Register' : 'Login'}</button>
+          <input type="password" value={password} placeholder={"your password"} onChange={handlePasswordChange} />
+        <button type="submit">{isRegistering ? 'Регистриране' : 'Влизане'}</button>
       </form>
       <button onClick={toggleRegister}>
-        {isRegistering ? 'Already have an account?' : 'Register'}
+        {isRegistering ? 'Вече имаш акаунт?' : 'Регистрация'}
       </button>
       </div>
     );
