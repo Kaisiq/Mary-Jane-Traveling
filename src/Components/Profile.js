@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import defaultProfilePicture from "../media/default-profile-picture.jpg"
 
 
 function ProfilePage() {
@@ -23,7 +24,7 @@ function ProfilePage() {
 
   return (
     <div className="profile-page">
-      <img src={profilePicture} alt="Profile picture" />
+      <img src={defaultProfilePicture} alt="Profile picture" />
       <div className="profile-bio">
         <h2>Bio</h2>
         <textarea value={bio} onChange={handleBioChange} />
