@@ -3,6 +3,18 @@ body{
     color:white;
 }
 
+button{
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    background-color: #323259;
+    text-shadow: 0 1.5px 0 rgba(0, 0, 0, 0.3);
+    color: white;
+    cursor: pointer;
+}
+
 h2{
     text-align: center;
     font-size: 3rem;
@@ -25,11 +37,48 @@ h2{
     font-size: 3rem;
     font-weight: bold;
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     /*gap: 5px;*/
     background-position: center center;
     background-size:cover;
+}
+
+.box input{
+    order:1;
+}
+
+
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 0.65em;
+    height: 0.65em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.45em;
+    height: 0.45em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em darkmagenta;
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
 }
 
 .music{
