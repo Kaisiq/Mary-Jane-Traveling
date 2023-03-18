@@ -108,7 +108,7 @@ function Logged(){
                 <ul className={"list_activities"}>
                 </ul>
                 {/*<p className={"descr"}>Lorem ipsum dolor sit amet</p>*/}
-                <div>
+                <div className={'buttons'}>
                     <button onClick={goToBooking}>reserve</button>
                 </div>
             </div>
