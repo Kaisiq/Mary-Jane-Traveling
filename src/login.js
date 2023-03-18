@@ -38,7 +38,8 @@ function LoginForm() {
             .then((userLoggedInCredential) => {
               const user = userLoggedInCredential.user;
               console.log('User logged in:', user);
-              navigate('/ChooseActivites')
+              navigate('/ChooseActivities',{
+                state: {uid: user.uid}})
             })
             .catch((error) => {
               console.error('Error logging in user:', error);
@@ -54,7 +55,8 @@ function LoginForm() {
           // User logged in successfully
           const user = userCredential.user;
           console.log('User logged in:', user);
-          setTimeout(function () { navigate('/ChooseActivities') }, 500);
+          setTimeout(function () { navigate('/ChooseActivities',{
+            state: {uid: user.uid}}) }, 500);
         })
         .catch((error) => {
           console.error('Error logging in user:', error);
@@ -74,8 +76,9 @@ function LoginForm() {
         const token = credential.accessToken;
         // The signed-in user info.
         const user = auth.currentUser;
-      
-        navigate('/ChooseActivities')
+        fetchUserData(user.uid)
+        navigate('/ChooseActivities',{
+          state: {uid: user.uid}})
             
         // IdP data available using getAdditionalUserInfo(result)
         // ..
@@ -93,6 +96,22 @@ function LoginForm() {
       });
   }
 
+ async function fetchUserData(userUid){
+  const database = firebase.database();
+    try{
+      const userDataCatsRef = database.ref(`Users/${userUid}/cats`)
+      const userDataRegsRef = database.ref(`Users/${userUid}/regs`)
+      const catsSnapshot = await userDataCatsRef.once("value")
+      const regsSnapshot = await userDataRegsRef.once("value")
+      const userData = catsSnapshot.val()
+      const userDatavtwo = regsSnapshot.val()
+      console.log(userData,userDatavtwo)
+     
+    }
+    catch (error)  {
+        console.log("Error getting user data:", error);
+    }
+ }
 
   const handleFacebookSubmit = async () => {
     const provider = new FacebookAuthProvider();
@@ -103,8 +122,9 @@ function LoginForm() {
         const credential = FacebookAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
         const user = result.user;
-
-        navigate('/ChooseActivities')
+        
+        navigate('/ChooseActivities',{
+          state: {uid: user.uid}})
       }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
