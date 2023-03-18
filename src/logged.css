@@ -16,6 +16,9 @@
     color:white;
     transition: 0.3s ease-in-out;
 }
+.small-info h2{
+    font-size: 4rem;
+}
 .buttons{
     width:100%;
     display:flex;
@@ -30,8 +33,18 @@
     border: none;
     background-color: #323259;
     text-shadow: 0 1.5px 0 rgba(0, 0, 0, 0.3);
+    color:white;
+    cursor: pointer;
 }
-
+.swiper, swiper-container{
+    width:90%;
+}
+swiper-slide{
+    width:80%;
+}
+.swiper-slide-active swiper-slide{
+    width:80%;
+}
 .hidden{
     display: none;
 }
