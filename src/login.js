@@ -151,8 +151,8 @@ function LoginForm() {
           </button>
         </div>
         <div className={"flex"}>
-          <button className={"small-img"}><img src={fblogo} alt={"fblogo"} onClick={handleFacebookSubmit} /></button>
-          <button className={"small-img"}><img src={googlelogo} alt={"googlelogo"} onClick={handleGoogleSubmit} /></button>
+          <button className={"small-img"}><img src={fblogo} alt={"fblogo"} onClick={function(){zoomin();handleFacebookSubmit();}} /></button>
+          <button className={"small-img"}><img src={googlelogo} alt={"googlelogo"} onClick={function(){zoomin();handleGoogleSubmit();}} /></button>
         </div>
       </form>
     </div>
