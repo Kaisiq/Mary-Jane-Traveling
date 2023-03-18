@@ -16,7 +16,7 @@ function Logged(){
     const database = firebase.database();
     const navigate = useNavigate();
 
-    const goToProfile = () => {
+    function goToProfile(){
         navigate('/Profile');
     }
 
@@ -30,6 +30,11 @@ function Logged(){
         })
         navigate('/');
     }
+
+    function goToInfo(){
+        navigate('/Info');
+    }
+
 // Function to fetch data from Firebase and return as JSON
     async function fetchDataFromFirebase(region) {
         try {
@@ -116,7 +121,7 @@ function Logged(){
                 </swiper-container>
                 <div className={'buttons'}>
                     <button>video</button>
-                    <button onClick={testFetch}>info</button>
+                    <button onClick={goToInfo}>info</button>
                 </div>
                 <p className={"descr"}>Lorem ipsum dolor sit amet</p>
                 <button>reserve</button>

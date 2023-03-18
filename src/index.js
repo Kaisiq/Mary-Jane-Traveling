@@ -7,6 +7,7 @@ import LoginForm from './login';
 import Logged from "./Components/Logged";
 import Profile from "./Components/Profile";
 import ChooseActivites from './Components/ChooseActivites';
+import AdditionalInfo from './Components/AdditionalInfo';
 import './login.css'
 import firebaseConfig from './firebase';
 import firebase from './firebase';
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/Profile",
     element: <ProfilePage/>
+  },
+  {
+    path: "/Info",
+    element: <AdditionalInfo/>
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
