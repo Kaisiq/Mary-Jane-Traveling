@@ -40,31 +40,31 @@ function LoginForm() {
           const user = userCredential.user;
           console.log('User registered:', user);
 
-          firebase.auth().signInWithEmailAndPassword(email, password)
-            .then((userLoggedInCredential) => {
-              const user = userLoggedInCredential.user;
-              console.log('User logged in:', user);
-              navigate('/ChooseActivites')
-            })
-            .catch((error) => {
-              console.error('Error logging in user:', error);
-            });
-
-        })
-        .catch((error) => {
-          console.error('Error registering user:', error);
-        });
-    } else {
-      firebase.auth().signInWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-          // User logged in successfully
-          const user = userCredential.user;
-          console.log('User logged in:', user);
-          navigate('/Logged');
-        })
-        .catch((error) => {
-          console.error('Error logging in user:', error);
-        });
+              firebase.auth().signInWithEmailAndPassword(email, password)
+                .then((userLoggedInCredential) => {
+                const user = userLoggedInCredential.user;
+                console.log('User logged in:', user);
+                navigate('/ChooseActivites')
+              })
+              .catch((error) => {
+                console.error('Error logging in user:', error);
+              });
+             
+              })
+              .catch((error) => {
+                console.error('Error registering user:', error);
+              });
+          } else {
+            firebase.auth().signInWithEmailAndPassword(email, password)
+              .then((userCredential) => {
+                // User logged in successfully
+                const user = userCredential.user;
+                console.log('User logged in:', user);
+                setTimeout(function() {navigate('/Logged')}, 500);
+              })
+              .catch((error) => {
+                console.error('Error logging in user:', error);
+              });
 
 
     }
