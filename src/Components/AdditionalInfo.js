@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom';
 
 
 
-function Info(){ //TODO: Region read
+function Info(){
     const [data,setData] = useState(null);
     const [loading,setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -29,15 +29,11 @@ function Info(){ //TODO: Region read
     }
     async function fetchDataFromFirebase(region) {
         try {
-            // Query the Firebase database for the desired data
             // const dataRef = database.ref(`RegionData/${region}`);
             const dataDescr = database.ref(`RegionData/${region}/Desc`);
 
-
-            // Wait for the query to complete and get the data snapshot
             // const snapshot = await dataRef.once("value");
             const snapshot = await dataDescr.once("value");
-            // Get the data from the snapshot and return as JSON
             const data = snapshot.val();
             return JSON.stringify(data);
         } catch (error) {
@@ -46,7 +42,7 @@ function Info(){ //TODO: Region read
     }
 
     useEffect(() => {
-        fetchDataFromFirebase(state.location)// TODO: Region add in place of lovech
+        fetchDataFromFirebase(state.location)
             .then(res => {
                 setData(res);
             })
@@ -84,9 +80,6 @@ function Info(){ //TODO: Region read
           <button onClick={goToBooking}>Reserve</button>
       </div>
     );
-
-
-
 
 }
 
