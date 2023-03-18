@@ -5,9 +5,11 @@ import reportWebVitals from './reportWebVitals';
 import Register from "./Components/Register";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+
+const register = ReactDOM.createRoot(document.getElementById('register'));
+register.render(
     <React.StrictMode>
         <Header />
         <Register />

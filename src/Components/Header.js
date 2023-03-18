@@ -1,5 +1,7 @@
 import '../App.css';
-
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Register from "./Register";
+import App from "./App";
 
 function Header() {
     return(
@@ -7,22 +9,29 @@ function Header() {
             <div className="branding">
                 <h1>Mary Jane</h1>
             </div>
+            <Router>
             <nav>
                 <ul>
                     <li>
-                        <a href="index.js">Home</a>
+                        <Link to="/index">Home</Link>
                     </li>
                     <li>
-                        <a href="index.js">Find Friends</a>
+                        <Link to="index">Find Friends</Link>
                     </li>
                     <li>
-                        <a href="index.js">Profile</a>
+                        <Link to="index">Profile</Link>
                     </li>
                     <li>
-                        <a href="register.js">Влизане</a>
+                        <Link to="register">Влизане</Link>
                     </li>
                 </ul>
+                <Routes>
+                    <Route exact path="/" component={App}/>
+                    <Route path="/index" component={App} />
+                    <Route path="/register" component={Register} />
+                </Routes>
             </nav>
+            </Router>
         </header>
     )
 }
