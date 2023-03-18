@@ -16,6 +16,20 @@ function Logged(){
     const database = firebase.database();
     const navigate = useNavigate();
 
+    const goToProfile = () => {
+        navigate('/Profile');
+    }
+
+    function handleLogout(){
+        firebase.auth().signOut()
+        .then(() => {
+            console.log("Sign out successful.");
+        })
+        .catch((error) => {
+            console.log("Sign out unsuccessful");
+        })
+        navigate('/');
+    }
 // Function to fetch data from Firebase and return as JSON
     async function fetchDataFromFirebase(region) {
         try {
@@ -81,10 +95,10 @@ function Logged(){
     return (
         <div className='main-screen'>
             <header className={"header-nav"}>
-                <button>
+                <button onClick = {goToProfile}>
                     Profile
                 </button>
-                <button>
+                <button onClick = {handleLogout}>
                     Logout
                 </button>
             </header>

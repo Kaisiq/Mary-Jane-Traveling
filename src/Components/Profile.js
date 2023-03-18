@@ -1,8 +1,17 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+
 
 function ProfilePage() {
   const [profilePicture, setProfilePicture] = useState('../default-profile-pic.jpg');
   const [bio, setBio] = useState('I am a software developer.');
+
+  const navigate = useNavigate();
+
+  function handleTransfer() {
+    navigate('/Logged');
+  }
+
 
   function handleProfilePictureChange(event) {
     setProfilePicture(event.target.value);
@@ -25,6 +34,8 @@ function ProfilePage() {
           <input type="file" onChange={handleProfilePictureChange} />
         </label>
         <button>Save</button>
+
+        <button onClick = {handleTransfer}>Back</button>
       </div>
     </div>
   );
