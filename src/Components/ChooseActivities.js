@@ -19,9 +19,9 @@ function ChooseActivities(){
     const handleConfirmation = () =>{
       navigate('/Logged');
     }
-  
+
     return (
-    
+
       <div className={"content-activities"}>
         <h2>Избери любимите си занимания:</h2>
         <form className={'fav-entertainments'}>

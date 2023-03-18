@@ -24,8 +24,16 @@ function LoginForm() {
     setIsRegistering(!isRegistering);
   }
 
+  const removeError = () => {
+    var err = document.getElementById("error-msg");
+    err.style.transform = "translateX(110%)";
+  }
   const showError = () => {
-
+    var err = document.getElementById("error-msg");
+    err.style.transform = "translateX(0%)";
+    var myImg = document.getElementById("map");
+    myImg.style.transform = '';
+    setTimeout(removeError, 5500);
   }
 
   const handleSubmit = (event) => {
@@ -125,7 +133,7 @@ function LoginForm() {
   return (
     <div className='login-form'>
       <div id={"map"} className={'background'}></div>
-      <div className={"error-message"}>Не съществува акаунт с тези име и парола</div>
+      <div className={"error-message"} id={"error-msg"}>Не съществува акаунт с тези име и парола</div>
       <form onSubmit={handleSubmit}>
         <h2>{isRegistering ? 'Регистрация' : 'Влизане'}</h2>
         <label>

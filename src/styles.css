@@ -52,8 +52,17 @@ code {
     background: #13132b;
 }
 .error-message{
-    float: right;
-    transform: translateX(50%)
+    position: absolute;
+    right:10px;
+    top:20px;
+    color: #700940;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ceceeb;
+    transform: translateX(110%);
+    transition: 0.4s ease-in-out;
 }
 .background{
     position: absolute;
@@ -309,7 +318,8 @@ h2{
 .box{
     border-radius: 15px;
     width:19%;
-    height:300px;
+    max-height:300px;
+    height:30vh;
     color:white;
     font-size: 3rem;
     font-weight: bold;
