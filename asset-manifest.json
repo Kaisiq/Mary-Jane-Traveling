@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/hackaton/static/css/main.0b43f916.css",
-    "main.js": "/hackaton/static/js/main.f39f3599.js",
-    "static/js/787.d02807e0.chunk.js": "/hackaton/static/js/787.d02807e0.chunk.js",
-    "static/media/sightseeing.jpg": "/hackaton/static/media/sightseeing.fac7aeee9ca8ebab25ff.jpg",
-    "static/media/videogames.jpg": "/hackaton/static/media/videogames.1810fe708cd1129b7b8a.jpg",
-    "static/media/sport.jpg": "/hackaton/static/media/sport.e08a549079421623ca59.jpg",
-    "static/media/art.jpg": "/hackaton/static/media/art.d639db4b7af21862dff2.jpg",
-    "static/media/clubbing.jpg": "/hackaton/static/media/clubbing.5a9918d98e6b12cd23a6.jpg",
-    "static/media/music.jpg": "/hackaton/static/media/music.ca567d58acddb1e142f7.jpg",
-    "static/media/theatre.jpg": "/hackaton/static/media/theatre.7bf0034a5d840d275006.jpg",
-    "static/media/museum.jpg": "/hackaton/static/media/museum.62161faa117957a3aa71.jpg",
-    "static/media/hiking.jpg": "/hackaton/static/media/hiking.2e5ec29aad81425203a9.jpg",
-    "static/media/films.jpg": "/hackaton/static/media/films.00d650776931e9b86a79.jpg",
-    "static/media/background_earth.png": "/hackaton/static/media/background_earth.fa6690e86e3fbff1ac97.png",
-    "static/media/google.png": "/hackaton/static/media/google.cbd54fad8351dd2a650f.png",
-    "static/media/default-profile-picture.jpg": "/hackaton/static/media/default-profile-picture.0ec68611538207c85f8d.jpg",
-    "static/media/facebook.webp": "/hackaton/static/media/facebook.6327c4437b545ad6980e.webp",
-    "index.html": "/hackaton/index.html",
-    "main.0b43f916.css.map": "/hackaton/static/css/main.0b43f916.css.map",
-    "main.f39f3599.js.map": "/hackaton/static/js/main.f39f3599.js.map",
-    "787.d02807e0.chunk.js.map": "/hackaton/static/js/787.d02807e0.chunk.js.map"
+    "main.css": "/static/css/main.6a239061.css",
+    "main.js": "/static/js/main.8186e1b0.js",
+    "static/js/787.d02807e0.chunk.js": "/static/js/787.d02807e0.chunk.js",
+    "static/media/sightseeing.jpg": "/static/media/sightseeing.fac7aeee9ca8ebab25ff.jpg",
+    "static/media/videogames.jpg": "/static/media/videogames.1810fe708cd1129b7b8a.jpg",
+    "static/media/sport.jpg": "/static/media/sport.e08a549079421623ca59.jpg",
+    "static/media/art.jpg": "/static/media/art.d639db4b7af21862dff2.jpg",
+    "static/media/clubbing.jpg": "/static/media/clubbing.5a9918d98e6b12cd23a6.jpg",
+    "static/media/music.jpg": "/static/media/music.ca567d58acddb1e142f7.jpg",
+    "static/media/theatre.jpg": "/static/media/theatre.7bf0034a5d840d275006.jpg",
+    "static/media/museum.jpg": "/static/media/museum.62161faa117957a3aa71.jpg",
+    "static/media/hiking.jpg": "/static/media/hiking.2e5ec29aad81425203a9.jpg",
+    "static/media/films.jpg": "/static/media/films.00d650776931e9b86a79.jpg",
+    "static/media/background_earth.png": "/static/media/background_earth.fa6690e86e3fbff1ac97.png",
+    "static/media/google.png": "/static/media/google.cbd54fad8351dd2a650f.png",
+    "static/media/default-profile-picture.jpg": "/static/media/default-profile-picture.0ec68611538207c85f8d.jpg",
+    "static/media/facebook.webp": "/static/media/facebook.6327c4437b545ad6980e.webp",
+    "index.html": "/index.html",
+    "main.6a239061.css.map": "/static/css/main.6a239061.css.map",
+    "main.8186e1b0.js.map": "/static/js/main.8186e1b0.js.map",
+    "787.d02807e0.chunk.js.map": "/static/js/787.d02807e0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b43f916.css",
-    "static/js/main.f39f3599.js"
+    "static/css/main.6a239061.css",
+    "static/js/main.8186e1b0.js"
   ]
 }
