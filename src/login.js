@@ -49,6 +49,7 @@ function LoginForm() {
           firebase.auth().signInWithEmailAndPassword(email, password)
             .then((userLoggedInCredential) => {
               const user = userLoggedInCredential.user;
+              addUserToDB(user.uid)
               console.log('User logged in:', user);
               navigate('/ChooseActivities',{
                 state: {uid: user.uid}})
@@ -93,7 +94,11 @@ function LoginForm() {
         
         // The signed-in user info.
         const user = auth.currentUser;
-        fetchUserData(user.uid)
+        let userData = fetchUserData(user.uid)
+        if(typeof userData[0] === "undefined"){
+          addUserToDB(user.uid)
+        }
+        userData = fetchUserData(user.uid)
         navigate('/ChooseActivities',{
           state: {uid: user.uid}})
             
@@ -102,22 +107,36 @@ function LoginForm() {
       });
   }
 
+  async function addUserToDB(userUid){
+    const databaseRef = firebase.database()
+    const userRef = databaseRef.ref(`Users`)
+    databaseRef.ref('Users/' + userUid).set({
+      cats: "",
+      regs: ""
+    })
+    .then(() => {
+      console.log('New user added to database');
+    })
+    .catch((error) => {
+      console.error('Error adding new user to database:', error);
+    });
+}
+
   async function fetchUserData(userUid){
-  const database = firebase.database();
-    try{
-      const userDataCatsRef = database.ref(`Users/${userUid}/cats`)
-      const userDataRegsRef = database.ref(`Users/${userUid}/regs`)
-      const catsSnapshot = await userDataCatsRef.once("value")
-      const regsSnapshot = await userDataRegsRef.once("value")
-      const userData = catsSnapshot.val()
-      const userDatavtwo = regsSnapshot.val()
-      console.log(userData,userDatavtwo)
-     
-    }
-    catch (error)  {
-        console.log("Error getting user data:", error);
-    }
- }
+    const database = firebase.database();
+      try{
+        const userDataCatsRef = database.ref(`Users/${userUid}/cats`)
+        const userDataRegsRef = database.ref(`Users/${userUid}/regs`)
+        const catsSnapshot = await userDataCatsRef.once("value")
+        const regsSnapshot = await userDataRegsRef.once("value")
+        const userDataCats = catsSnapshot.val()
+        const userDataRegs = regsSnapshot.val()
+        return [userDataCats,userDataRegs]
+      }
+      catch (error)  {
+          console.log("Error getting user data:", error);
+      }
+   }
 
   const zoomin = () => {
     var myImg = document.getElementById("map");
