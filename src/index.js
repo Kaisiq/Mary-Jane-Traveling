@@ -4,15 +4,18 @@ import './index.css';
 import App from './Components/App';
 import reportWebVitals from './reportWebVitals';
 import LoginForm from './login';
+import Logged from "./Components/Logged";
 import './login.css'
 import firebaseConfig from './firebase';
 import firebase from './firebase';
 
+const isLogged = false;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <div className='login-box-container'>
-    <LoginForm/>  
+        {isLogged ? <LoginForm/> : <Logged/>}
+    <LoginForm/>
     </div>
   </React.StrictMode>
 )
