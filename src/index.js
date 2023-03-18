@@ -13,6 +13,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
 import ProfilePage from "./Components/Profile";
 
 const router = createBrowserRouter([
