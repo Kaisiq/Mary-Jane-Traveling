@@ -22,19 +22,18 @@ function Logged(){
 
     function handleLogout(){
         firebase.auth().signOut()
-        .then(() => {
-            console.log("Sign out successful.");
-        })
-        .catch((error) => {
-            console.log("Sign out unsuccessful");
-        })
+            .then(() => {
+                console.log("Sign out successful.");
+            })
+            .catch((error) => {
+                console.log("Sign out unsuccessful");
+            })
         navigate('/');
     }
 
     function goToInfo(){
         navigate('/Info');
     }
-
 // Function to fetch data from Firebase and return as JSON
     async function fetchDataFromFirebase(region) {
         try {
