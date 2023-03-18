@@ -33,7 +33,7 @@ function ChooseActivities(){
     .catch((error) => {
       console.error('Error updating Categories:', error);
     });
-      navigate('/Logged');
+      navigate('/Logged', {state: {uid: state.uid}});
     }
 
     return (

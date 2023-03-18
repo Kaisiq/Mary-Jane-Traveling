@@ -2,12 +2,14 @@ import React, {useEffect, useRef} from 'react';
 import '../styles.css';
 import reportWebVitals from '../reportWebVitals';
 import firebase from '../firebase';
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 
 
 function Logged(){
 // Get a reference to the Firebase database
+    const { state } = useLocation();
     const database = firebase.database();
     const navigate = useNavigate();
     var currentRegion = "";
@@ -34,7 +36,7 @@ function Logged(){
 
     function goToBooking(){
         var Location = "Sofia";
-        window.location.href = `https://www.booking.com/search?location=${Location}`;
+        window.location.href = `https://www.booking.com/searchresults.bg.html?ss=${Location}`;
     }
 
 
