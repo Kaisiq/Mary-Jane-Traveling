@@ -121,12 +121,24 @@ function Logged() {
     }
 
     async function testFetch() {
+        const ulist = document.querySelector(".list_activities");
+        const city_name = document.querySelector(".city_name");
+        city_name.textContent="";
+        while(ulist.firstChild){
+            ulist.removeChild(ulist.firstChild);
+        }
         handleFetch("Lovech");
     }
 
 
     function backOnMap(){
         var small_info = document.querySelector(".small-info");
+            const ulist = document.querySelector(".list_activities");
+            const city_name = document.querySelector(".city_name");
+            city_name.textContent="";
+            while(ulist.firstChild){
+                ulist.removeChild(ulist.firstChild);
+            }
         small_info.classList.toggle("left-from-screen");
     }
 
@@ -140,18 +152,17 @@ function Logged() {
                     Изход
                 </button>
             </header>
-            <canvas id={"canvas"}>
+            <canvas id={"canvas"} onClick={testFetch}>
 
-            
+
 
             </canvas>
-            <div className='small-info'> {/*TODO: add left-from-screen*/}
+            <div className='small-info left-from-screen'> {/*TODO: add left-from-screen*/}
                 <button className={'back'} onClick={backOnMap}>Назад</button>
                 <div className={'justifyCenter'}>
                 <h2 className={"city_name"}></h2>
                 <img src={""} alt={""} />
                 <div className={'buttons'}>
-                    <button onClick={testFetch}>Видео</button>
                     <button onClick={goToInfo}>Информация</button>
                 </div>
                 <ul className={"list_activities"}>
