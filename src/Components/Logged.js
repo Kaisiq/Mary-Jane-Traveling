@@ -33,13 +33,13 @@ function Logged() {
 
     function goToInfo() {
         navigate('/Info', {
-            state: { location: currentRegion }
+            state: { uid: state.uid, location: currentRegion }
         })
     }
 
     function goCreateTravel() {
          navigate('/Organise', {
-            state: { location: currentRegion}
+            state: { uid: state.uid, location: currentRegion }
          })
     }
 
