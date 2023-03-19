@@ -40,6 +40,10 @@ function Logged(){
             state: {location: currentRegion}});
     }
 
+    function goCreateTravel(){
+        // navigate()
+    }
+
     function goToBooking(){
         window.location.href = `https://www.booking.com/searchresults.bg.html?ss=${currentRegion}`;
     }
@@ -129,17 +133,21 @@ function Logged(){
                     Изход
                 </button>
             </header>
+            <canvas id={"canvas"}>
+
+            </canvas>
             <div className='small-info'>
-                {/* <h2 className={"city_name"}></h2> */}
+                <h2 className={"city_name"}></h2>
                 <img src={""} alt={""}/>
                 <div className={'buttons'}>
-                    <button onClick={testFetch}>Видео(кур)</button>
+                    <button onClick={testFetch}>Видео</button>
                     <button onClick={goToInfo}>Информация</button>
                 </div>
                 <ul className={"list_activities"}>
                 </ul>
                 {/*<p className={"descr"}>Lorem ipsum dolor sit amet</p>*/}
                 <div className={'buttons'}>
+                    <button onClick={goCreateTravel}>Организирай ми почивка</button>
                     <button onClick={goToBooking}>Резервирай</button>
                 </div>
             </div>
