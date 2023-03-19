@@ -3,28 +3,24 @@ import reportWebVitals from '../reportWebVitals';
 import firebase from '../firebase';
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
-// import { useLocation } from "react-router-dom";
 
-
-
-function Logged(){
-// Get a reference to the Firebase database
-     const { state } = useLocation();
+function Logged() {
+    // Get a reference to the Firebase database
+    const { state } = useLocation();
     const database = firebase.database();
     const navigate = useNavigate();
-   // const state = useLocation();
     var currentRegion = "";
-    let regions 
+    let regions
 
-    useEffect(() =>{
+    useEffect(() => {
         fetchRegionUserDataWrapper()
-    }, []); 
+    }, []);
 
-    function goToProfile(){
-        navigate('/Profile',{state: {uid:state.uid}});
+    function goToProfile() {
+        navigate('/Profile', { state: { uid: state.uid } });
     }
 
-    function handleLogout(){
+    function handleLogout() {
         firebase.auth().signOut()
             .then(() => {
                 console.log("Sign out successful.");
@@ -35,21 +31,21 @@ function Logged(){
         navigate('/');
     }
 
-    function goToInfo(){
+    function goToInfo() {
         navigate('/Info', {
-            state: {location: currentRegion}});
+            state: { location: currentRegion }
+        });
     }
 
-    function goCreateTravel(){
+    function goCreateTravel() {
         // navigate()
     }
 
-    function goToBooking(){
+    function goToBooking() {
         window.location.href = `https://www.booking.com/searchresults.bg.html?ss=${currentRegion}`;
     }
 
-
-// Function to fetch data from Firebase and return as JSON
+    // Function to fetch data from Firebase and return as JSON
     async function fetchDataFromFirebase(region) {
         try {
             // Query the Firebase database for the desired data
@@ -66,18 +62,19 @@ function Logged(){
         }
     }
 
-    async function addLiToUl(ulist, region, from){
+    async function addLiToUl(ulist, region, from) {
         var data = await fetchDataFromFirebase(region + `/Activities/${from}/name`);
         var li = document.createElement("li");
         var checkbox = document.createElement("input");
         checkbox.setAttribute("type", "checkbox");
         li.textContent = JSON.parse(data);
         li.appendChild(checkbox);
-        if(li.textContent !== "") {
+        if (li.textContent !== "") {
             ulist.appendChild(li);
         }
     }
-    async function handleFetch(region){
+
+    async function handleFetch(region) {
         currentRegion = region;
         const ulist = document.querySelector(".list_activities");
         const city_name = document.querySelector(".city_name");
@@ -97,25 +94,25 @@ function Logged(){
         city_name.textContent = region;
     }
 
-    async function fetchRegionUserData(){
+    async function fetchRegionUserData() {
         const uid = state.uid
         const userDataRef = database.ref(`Users/${uid}/regs`)
-        try{
+        try {
             const snapshot = await userDataRef.once("value")
             return snapshot.val();
         }
-        catch(error){
-        console.log("Error getting user data:", error);
-        return null;
-      }
+        catch (error) {
+            console.log("Error getting user data:", error);
+            return null;
+        }
     }
 
-    const fetchRegionUserDataWrapper = async () =>{
-        try{
-        regions = await fetchRegionUserData()
-        console.log(regions)
-        }catch(error){
-             console.log("Error getting user data:", error);
+    const fetchRegionUserDataWrapper = async () => {
+        try {
+            regions = await fetchRegionUserData()
+            console.log(regions)
+        } catch (error) {
+            console.log("Error getting user data:", error);
         }
     }
 
@@ -126,19 +123,21 @@ function Logged(){
     return (
         <div className='main-screen'>
             <header className={"header-nav"}>
-                <button onClick = {goToProfile}>
+                <button onClick={goToProfile}>
                     Профил
                 </button>
-                <button onClick = {handleLogout}>
+                <button onClick={handleLogout}>
                     Изход
                 </button>
             </header>
             <canvas id={"canvas"}>
 
+            
+
             </canvas>
             <div className='small-info'>
                 <h2 className={"city_name"}></h2>
-                <img src={""} alt={""}/>
+                <img src={""} alt={""} />
                 <div className={'buttons'}>
                     <button onClick={testFetch}>Видео</button>
                     <button onClick={goToInfo}>Информация</button>
@@ -155,8 +154,6 @@ function Logged(){
     );
 }
 export default Logged;
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();
 
