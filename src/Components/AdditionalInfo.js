@@ -1,7 +1,7 @@
 import firebase from '../firebase';
 import '../styles.css';
 import {useNavigate} from "react-router-dom";
-import doge from '../media/default-profile-picture.jpg';
+import cityPic from '../media/lovech.jpg';
 import {useState, useEffect} from "react";
 import { useLocation } from 'react-router-dom';
 
@@ -62,7 +62,7 @@ function Info(){
     if (loading) return "Loading...";
     if (error) return "Error!";
     return(
-      <div className={"flexcol"}>
+      <div className={"flexcol eighty"}>
           <header className={"header-nav"}>
               <button onClick = {goBack}>
                 Назад
@@ -71,13 +71,13 @@ function Info(){
                   Изход
               </button>
           </header>
-          <h1 className={"city_name"}></h1>
+          <h1 className={"city_name"}>{state.location}</h1>
           <div className={"flex-info"}>
               <div>
               <p>{JSON.stringify(data,null,2)}</p>
                   <button className={"reserve"} onClick={goToBooking}>Резервирай</button>
               </div>
-              <img src={doge} alt={"dog"}/>
+              <img src={cityPic} alt={"cityPicture"}/>
           </div>
       </div>
     );
