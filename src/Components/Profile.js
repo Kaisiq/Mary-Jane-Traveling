@@ -1,16 +1,34 @@
 import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import defaultProfilePicture from "../media/default-profile-picture.jpg"
+import firebase from "../firebase";
 
 
 function ProfilePage() {
   const [profilePicture, setProfilePicture] = useState('../default-profile-pic.jpg');
   const [bio, setBio] = useState('Аз съм софтуерен инженер.');
-
+  const { state }= useLocation()
+  const uid = state.uid
   const navigate = useNavigate();
 
   function handleTransfer() {
     navigate('/Logged');
+  }
+
+  function handleEdit(){
+      navigate('/ChooseActivities',
+           {state: {uid:uid}});
+    }
+
+  function handleLogout(){
+        firebase.auth().signOut()
+            .then(() => {
+                console.log("Sign out successful.");
+            })
+            .catch((error) => {
+                console.log("Sign out unsuccessful");
+            })
+        navigate('/');
   }
 
 
@@ -53,10 +71,11 @@ function ProfilePage() {
         </div>
       </div>
 
-        <button className={"logout"}>Изход</button>
+        <button onClick={handleLogout} className={"logout"}>Изход</button>
         <div className={"profile-review"}>
-          <button>Напиши ревю</button>
-      </div>
+            <button>Напиши ревю</button>
+            <button onClick={handleEdit}>Промяна на любими занимания</button>
+        </div>
     </div>
   );
 }

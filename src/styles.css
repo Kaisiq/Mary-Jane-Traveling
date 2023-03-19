@@ -290,7 +290,8 @@ code {
 .buttons{
     width:100%;
     display:flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap:15px;
 }
 .small-info button{
     width:35%;
@@ -433,11 +434,20 @@ header{
     display:flex;
     flex-direction: column;
 }
+.eighty{
+    width: 80%;
+    margin-inline: auto;
+}
+.city_name{
+    text-align: center;
+    font-size: 3rem;
+    margin: 0 0 20px 0;
+}
 .flex-info{
     margin-inline: auto;
     display:flex;
     width: 90%;
-    gap: 25px;
+    gap: max(40px,5%);
     flex:1;
 }
 
@@ -457,7 +467,7 @@ header{
     text-align: justify;
 }
 .flex-info div p{
-    width: 70%;
+    /*width: 70%;*/
     margin-inline:auto;
 }
 
@@ -504,13 +514,15 @@ header{
 }
 .profile-review{
     display:flex;
+    flex-direction: column;
+    gap:2rem;
     justify-content: center;
     align-items: center;
     width: 27.5%;
 }
 .profile-review button{
-    font-size: 2rem;
-    padding: 25px;
+    font-size: 1.25rem;
+    padding: 15px;
 }
 
 .profile-page img {
