@@ -70,8 +70,7 @@ function LoginForm() {
           // User logged in successfully
           const user = userCredential.user;
           console.log('User logged in:', user);
-          setTimeout(function () { navigate('/ChooseActivities',{
-            state: {uid: user.uid}}) }, 500);
+          setTimeout(function () { navigate('/Logged',{state: {uid: user.uid}}) }, 500);
         })
         .catch((error) => {
           showError();
@@ -96,9 +95,12 @@ function LoginForm() {
         const user = auth.currentUser;
         if(isUserInDB(user.uid) == false){
           addUserToDB(user.uid)
+          navigate('/ChooseActivities',{
+            state: {uid: user.uid}})
         }
-        navigate('/ChooseActivities',{
-          state: {uid: user.uid}})
+        else{
+          navigate('/Logged',{state: {uid: user.uid}})
+        }
             
       }).catch((error) => {
         showError(error);
