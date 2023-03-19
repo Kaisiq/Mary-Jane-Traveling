@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import defaultProfilePicture from "../media/default-profile-picture.jpg"
 import firebase from "../firebase";
 
@@ -7,7 +7,8 @@ import firebase from "../firebase";
 function ProfilePage() {
   const [profilePicture, setProfilePicture] = useState('../default-profile-pic.jpg');
   const [bio, setBio] = useState('Аз съм софтуерен инженер.');
-
+  const { state }= useLocation()
+  const uid = state.uid
   const navigate = useNavigate();
 
   function handleTransfer() {
@@ -15,8 +16,8 @@ function ProfilePage() {
   }
 
   function handleEdit(){
-      navigate('/ChooseActivities');//,
-          // {state: {uid: user.uid}});
+      navigate('/ChooseActivities',
+           {state: {uid:uid}});
     }
 
   function handleLogout(){

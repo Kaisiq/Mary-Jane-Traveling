@@ -21,7 +21,7 @@ function Logged(){
     }, []); 
 
     function goToProfile(){
-        navigate('/Profile');
+        navigate('/Profile',{state: {uid:state.uid}});
     }
 
     function handleLogout(){
