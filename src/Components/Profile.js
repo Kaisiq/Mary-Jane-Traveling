@@ -5,7 +5,7 @@ import defaultProfilePicture from "../media/default-profile-picture.jpg"
 
 function ProfilePage() {
   const [profilePicture, setProfilePicture] = useState('../default-profile-pic.jpg');
-  const [bio, setBio] = useState('I am a software developer.');
+  const [bio, setBio] = useState('Аз съм софтуерен инженер.');
 
   const navigate = useNavigate();
 
@@ -24,30 +24,38 @@ function ProfilePage() {
 
   return (
     <div className="profile-page">
-      <div className="profile-container">
       <div className="profile-regions-list">
-    <ul>
-      <li>List Item 1</li>
-      <li>List Item 2</li>
-      <li>List Item 3</li>
-    </ul>
-    </div>
-    <div className="profile-info">
+          <div className={"flexcol"}>
+              <h3>Посетени области:</h3>
+              <ul>
+                <li>Добрич</li>
+                <li>Ямбол</li>
+                <li>Велико Търново</li>
+              </ul>
+          </div>
+      </div>
+
+      <div className="profile-info">
       <img src={defaultProfilePicture} alt="Profile picture" />
       <div className="profile-bio">
-        <h2>Bio</h2>
+        <h2>Информация</h2>
         <textarea value={bio} onChange={handleBioChange} />
       </div>
-      <div className="profile-actions">
-        <label>
-          Choose a profile picture:
-          <input type="file" onChange={handleProfilePictureChange} />
-        </label>
-        <button>Save</button>
+        <div className="profile-actions">
+            <label>
+                Избери профилна снимка:
+                <button>Снимка</button>
+            </label>
+            <div className={"flex"}>
+                <button>Запазване</button>
+                <button onClick = {handleTransfer}>Назад</button>
+            </div>
+        </div>
+      </div>
 
-        <button onClick = {handleTransfer}>Back</button>
-        </div>
-        </div>
+        <button className={"logout"}>Изход</button>
+        <div className={"profile-review"}>
+          <button>Напиши ревю</button>
       </div>
     </div>
   );
