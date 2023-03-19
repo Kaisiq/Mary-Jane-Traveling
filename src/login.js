@@ -70,8 +70,7 @@ function LoginForm() {
           // User logged in successfully
           const user = userCredential.user;
           console.log('User logged in:', user);
-          setTimeout(function () { navigate('/ChooseActivities',{
-            state: {uid: user.uid}}) }, 500);
+          setTimeout(function () { navigate('/Logged',{state: {uid: user.uid}}) }, 500);
         })
         .catch((error) => {
           showError();
@@ -94,13 +93,14 @@ function LoginForm() {
         
         // The signed-in user info.
         const user = auth.currentUser;
-        let userData = fetchUserData(user.uid)
-        if(typeof userData[0] === "undefined"){
+        if(isUserInDB(user.uid) == false){
           addUserToDB(user.uid)
+          navigate('/ChooseActivities',{
+            state: {uid: user.uid}})
         }
-        userData = fetchUserData(user.uid)
-        navigate('/ChooseActivities',{
-          state: {uid: user.uid}})
+        else{
+          navigate('/Logged',{state: {uid: user.uid}})
+        }
             
       }).catch((error) => {
         showError(error);
@@ -122,19 +122,20 @@ function LoginForm() {
     });
 }
 
-  async function fetchUserData(userUid){
-    const database = firebase.database();
+  async function isUserInDB(userUid){
+      const database = firebase.database()
+      const userDataRef = database.ref(`Users/${userUid}`);
       try{
-        const userDataCatsRef = database.ref(`Users/${userUid}/cats`)
-        const userDataRegsRef = database.ref(`Users/${userUid}/regs`)
-        const catsSnapshot = await userDataCatsRef.once("value")
-        const regsSnapshot = await userDataRegsRef.once("value")
-        const userDataCats = catsSnapshot.val()
-        const userDataRegs = regsSnapshot.val()
-        return [userDataCats,userDataRegs]
+        const snapshot = await userDataRef.once("value");
+        const userData = snapshot.val();
+        if(!userData.cats){
+          return false;
+        }
+        return true;
       }
-      catch (error)  {
-          console.log("Error getting user data:", error);
+      catch(error){
+        console.log("Error getting user data:", error);
+        return false;
       }
    }
 

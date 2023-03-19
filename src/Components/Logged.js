@@ -35,7 +35,7 @@ function Logged(){
     }
 
     function goToBooking(){
-        window.location.href = `https://www.booking.com/searchresults.bg.html?ss=${state.location}`;
+        window.location.href = `https://www.booking.com/searchresults.bg.html?ss=${currentRegion}`;
     }
 
 
