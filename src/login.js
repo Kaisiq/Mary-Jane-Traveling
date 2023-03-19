@@ -33,6 +33,7 @@ function LoginForm() {
     err.style.transform = "translateX(0%)";
     var myImg = document.getElementById("map");
     myImg.style.transform = '';
+    err.textContent = errorMsg;
     setTimeout(removeError, 5500);
   }
 
@@ -55,13 +56,13 @@ function LoginForm() {
                 state: {uid: user.uid}})
             })
             .catch((error) => {
-              showError();
+              showError(error);
               console.error('Error logging in user:', error);
             });
 
         })
         .catch((error) => {
-          showError();
+          showError(error);
           console.error('Error registering user:', error);
         });
     } else {
@@ -73,7 +74,7 @@ function LoginForm() {
           setTimeout(function () { navigate('/Logged',{state: {uid: user.uid}}) }, 500);
         })
         .catch((error) => {
-          showError();
+          showError(error);
           console.error('Error logging in user:', error);
         });
     }
@@ -118,6 +119,7 @@ function LoginForm() {
       console.log('New user added to database');
     })
     .catch((error) => {
+      showError(error);
       console.error('Error adding new user to database:', error);
     });
 }
@@ -134,6 +136,7 @@ function LoginForm() {
         return true;
       }
       catch(error){
+        showError(error);
         console.log("Error getting user data:", error);
         return false;
       }
@@ -155,7 +158,7 @@ function LoginForm() {
     <div className='login-form'>
       <div className={"space"}></div>
       <div id={"map"} className={'background'}></div>
-      <div className={"error-message"} id={"error-msg"}>Не съществува акаунт с тези име и парола</div>
+      <div className={"error-message"} id={"error-msg"}></div>
       <form onSubmit={handleSubmit}>
         <h2>{isRegistering ? 'Регистрация' : 'Влизане'}</h2>
         <label>
