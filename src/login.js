@@ -6,6 +6,7 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider} fro
 import { useNavigate } from "react-router-dom"
 import fblogo from './media/facebook.webp'
 import googlelogo from './media/google.png'
+import { remove } from '@firebase/database'
 
 
 function LoginForm() {
@@ -171,14 +172,14 @@ function LoginForm() {
         <input type="password" value={password} placeholder={"your password"} onChange={handlePasswordChange} />
         <button onClick={zoomin} type="submit">{isRegistering ? 'Регистриране' : 'Влизане'}</button>
         <div className={"flex"}>
+        </div>
+      </form>
           <button onClick={toggleRegister}>
             {isRegistering ? 'Вече имаш акаунт?' : 'Регистрация'}
           </button>
           <button>
             Админ
           </button>
-        </div>
-      </form>
         <div className={"flex"}>
           <button className={"small-img"}><img src={fblogo} alt={"fblogo"} onClick={function(){zoomin();handleSocialSubmit(new FacebookAuthProvider());}} /></button>
           <button className={"small-img"}><img src={googlelogo} alt={"googlelogo"} onClick={function(){zoomin();handleSocialSubmit(new GoogleAuthProvider());}} /></button>
