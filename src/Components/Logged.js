@@ -95,24 +95,24 @@ function Logged(){
         <div className='main-screen'>
             <header className={"header-nav"}>
                 <button onClick = {goToProfile}>
-                    Profile
+                    Профил
                 </button>
                 <button onClick = {handleLogout}>
-                    Logout
+                    Изход
                 </button>
             </header>
             <div className='small-info'>
-                <h2 className={"city_name"}>Sofia</h2>
+                <h2 className={"city_name"}></h2>
                 <img src={""} alt={""}/>
                 <div className={'buttons'}>
-                    <button onClick={testFetch}>video</button>
-                    <button onClick={goToInfo}>info</button>
+                    <button onClick={testFetch}>Видео(кур)</button>
+                    <button onClick={goToInfo}>Информация</button>
                 </div>
                 <ul className={"list_activities"}>
                 </ul>
                 {/*<p className={"descr"}>Lorem ipsum dolor sit amet</p>*/}
                 <div className={'buttons'}>
-                    <button onClick={goToBooking}>reserve</button>
+                    <button onClick={goToBooking}>Резервирай</button>
                 </div>
             </div>
         </div>
