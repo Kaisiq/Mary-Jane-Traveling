@@ -101,6 +101,9 @@ function Logged(){
                     Изход
                 </button>
             </header>
+            <canvas id={"canvas"}>
+
+            </canvas>
             <div className='small-info'>
                 <h2 className={"city_name"}></h2>
                 <img src={""} alt={""}/>
