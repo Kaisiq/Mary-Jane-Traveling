@@ -260,11 +260,26 @@ code {
     width: 30%;
     height:100vh;
     background: #1b1b38;
-    justify-content: center;
     align-content: center;
     align-items: center;
     color:white;
-    transition: 0.3s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+.left-from-screen{
+    transform: translateX(-100%);
+}
+.justifyCenter{
+    height:100%;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.small-info .back{
+    vertical-align: top;
+    align-self: flex-end;
+    /*top:0;*/
+    /*right:0;*/
 }
 .list_activities{
     width:80%;
