@@ -12,7 +12,9 @@ function ProfilePage() {
   const navigate = useNavigate();
 
   function handleTransfer() {
-    navigate('/Logged');
+    navigate('/Logged', {
+      state: {uid: uid}
+    });
   }
 
   function handleEdit(){

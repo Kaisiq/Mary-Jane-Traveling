@@ -34,11 +34,13 @@ function Logged() {
     function goToInfo() {
         navigate('/Info', {
             state: { location: currentRegion }
-        });
+        })
     }
 
     function goCreateTravel() {
-        // navigate()
+         navigate('/Organise', {
+            state: { location: currentRegion}
+         })
     }
 
     function goToBooking() {
