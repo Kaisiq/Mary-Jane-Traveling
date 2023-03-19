@@ -149,8 +149,10 @@ function LoginForm() {
     }
   }
 
+
   return (
     <div className='login-form'>
+      <div className={"space"}></div>
       <div id={"map"} className={'background'}></div>
       <div className={"error-message"} id={"error-msg"}>Не съществува акаунт с тези име и парола</div>
       <form onSubmit={handleSubmit}>
