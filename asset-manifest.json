@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6a239061.css",
-    "main.js": "/static/js/main.8186e1b0.js",
+    "main.css": "/static/css/main.76a267c1.css",
+    "main.js": "/static/js/main.1f3cbf32.js",
     "static/js/787.d02807e0.chunk.js": "/static/js/787.d02807e0.chunk.js",
     "static/media/sightseeing.jpg": "/static/media/sightseeing.fac7aeee9ca8ebab25ff.jpg",
     "static/media/videogames.jpg": "/static/media/videogames.1810fe708cd1129b7b8a.jpg",
@@ -13,17 +13,17 @@
     "static/media/museum.jpg": "/static/media/museum.62161faa117957a3aa71.jpg",
     "static/media/hiking.jpg": "/static/media/hiking.2e5ec29aad81425203a9.jpg",
     "static/media/films.jpg": "/static/media/films.00d650776931e9b86a79.jpg",
-    "static/media/background_earth.png": "/static/media/background_earth.fa6690e86e3fbff1ac97.png",
+    "static/media/canvas.png": "/static/media/canvas.29754d1eec92fde5bb0b.png",
     "static/media/google.png": "/static/media/google.cbd54fad8351dd2a650f.png",
     "static/media/default-profile-picture.jpg": "/static/media/default-profile-picture.0ec68611538207c85f8d.jpg",
     "static/media/facebook.webp": "/static/media/facebook.6327c4437b545ad6980e.webp",
     "index.html": "/index.html",
-    "main.6a239061.css.map": "/static/css/main.6a239061.css.map",
-    "main.8186e1b0.js.map": "/static/js/main.8186e1b0.js.map",
+    "main.76a267c1.css.map": "/static/css/main.76a267c1.css.map",
+    "main.1f3cbf32.js.map": "/static/js/main.1f3cbf32.js.map",
     "787.d02807e0.chunk.js.map": "/static/js/787.d02807e0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a239061.css",
-    "static/js/main.8186e1b0.js"
+    "static/css/main.76a267c1.css",
+    "static/js/main.1f3cbf32.js"
   ]
 }
