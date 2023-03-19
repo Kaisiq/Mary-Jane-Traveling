@@ -65,18 +65,20 @@ function Info(){
       <div className={"flexcol"}>
           <header className={"header-nav"}>
               <button onClick = {goBack}>
-                Back
+                Назад
               </button>
               <button onClick = {handleLogout}>
-                  Logout
+                  Изход
               </button>
           </header>
           <h1 className={"city_name"}></h1>
           <div className={"flex-info"}>
+              <div>
               <p>{JSON.stringify(data,null,2)}</p>
+                  <button className={"reserve"} onClick={goToBooking}>Резервирай</button>
+              </div>
               <img src={doge} alt={"dog"}/>
           </div>
-          <button className={"reserve"} onClick={goToBooking}>Reserve</button>
       </div>
     );
 
