@@ -290,7 +290,8 @@ code {
 .buttons{
     width:100%;
     display:flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap:15px;
 }
 .small-info button{
     width:35%;
@@ -504,13 +505,15 @@ header{
 }
 .profile-review{
     display:flex;
+    flex-direction: column;
+    gap:2rem;
     justify-content: center;
     align-items: center;
     width: 27.5%;
 }
 .profile-review button{
-    font-size: 2rem;
-    padding: 25px;
+    font-size: 1.25rem;
+    padding: 15px;
 }
 
 .profile-page img {
