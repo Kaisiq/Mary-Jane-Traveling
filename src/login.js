@@ -6,7 +6,6 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider} fro
 import { useNavigate } from "react-router-dom"
 import fblogo from './media/facebook.webp'
 import googlelogo from './media/google.png'
-import { remove } from '@firebase/database'
 
 
 function LoginForm() {
@@ -95,7 +94,7 @@ function LoginForm() {
         
         // The signed-in user info.
         const user = auth.currentUser;
-        if(isUserInDB(user.uid) == false){
+        if(isUserInDB(user.uid) === false){
           addUserToDB(user.uid)
           navigate('/ChooseActivities',{
             state: {uid: user.uid}})
@@ -111,7 +110,6 @@ function LoginForm() {
 
   async function addUserToDB(userUid){
     const databaseRef = firebase.database()
-    const userRef = databaseRef.ref(`Users`)
     databaseRef.ref('Users/' + userUid).set({
       cats: "",
       regs: ""
