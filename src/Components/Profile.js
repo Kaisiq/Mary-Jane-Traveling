@@ -24,6 +24,15 @@ function ProfilePage() {
 
   return (
     <div className="profile-page">
+      <div className="profile-container">
+      <div className="profile-regions-list">
+    <ul>
+      <li>List Item 1</li>
+      <li>List Item 2</li>
+      <li>List Item 3</li>
+    </ul>
+    </div>
+    <div className="profile-info">
       <img src={defaultProfilePicture} alt="Profile picture" />
       <div className="profile-bio">
         <h2>Bio</h2>
@@ -37,6 +46,8 @@ function ProfilePage() {
         <button>Save</button>
 
         <button onClick = {handleTransfer}>Back</button>
+        </div>
+        </div>
       </div>
     </div>
   );

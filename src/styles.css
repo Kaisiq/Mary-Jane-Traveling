@@ -508,6 +508,12 @@ header{
     background-color: #357ae8;
 }
 
+.profile-container{
+    
+  display: flex;
+  flex-direction: row;
+
+}
 
 /*profile end*/
 
