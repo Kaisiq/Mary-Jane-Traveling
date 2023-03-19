@@ -14,6 +14,7 @@ import {
 } from "react-router-dom";
 
 import ProfilePage from "./Components/Profile";
+import Organise from "./Components/Organise";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/Info",
     element: <AdditionalInfo />
+  },
+  {
+    path: "/Organise",
+    element: <Organise />
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
