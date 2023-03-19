@@ -176,7 +176,7 @@ function LoginForm() {
         </div>
       </form>
           <button onClick={toggleRegister}>
-            {isRegistering ? 'Вече имаш акаунт?' : 'Регистрация'}
+            {isRegistering ? 'Вече имаш акаунт?' : 'Към регистрацията'}
           </button>
           <button>
             Админ
