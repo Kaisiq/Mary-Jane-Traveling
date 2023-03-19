@@ -100,7 +100,8 @@ function LoginForm() {
             state: {uid: user.uid}})
         }
         else{
-          navigate('/Logged',{state: {uid: user.uid}})
+          navigate('/ChooseActivities',{
+            state: {uid: user.uid}})
         }
             
       }).catch((error) => {
