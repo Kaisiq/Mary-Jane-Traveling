@@ -1,15 +1,14 @@
-import React, {useEffect, useRef} from 'react';
 import '../styles.css';
 import reportWebVitals from '../reportWebVitals';
 import firebase from '../firebase';
 import { useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 
 
 function Logged(){
 // Get a reference to the Firebase database
-    const { state } = useLocation();
+    // const { state } = useLocation();
     const database = firebase.database();
     const navigate = useNavigate();
     var currentRegion = "";
@@ -105,7 +104,7 @@ function Logged(){
 
             </canvas>
             <div className='small-info'>
-                <h2 className={"city_name"}></h2>
+                {/* <h2 className={"city_name"}></h2> */}
                 <img src={""} alt={""}/>
                 <div className={'buttons'}>
                     <button onClick={testFetch}>Видео(кур)</button>
