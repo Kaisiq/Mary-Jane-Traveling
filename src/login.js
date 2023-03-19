@@ -35,7 +35,7 @@ function LoginForm() {
     var myImg = document.getElementById("map");
     myImg.style.transform = '';
     err.textContent = errorMsg;
-    setTimeout(removeError, 2500);
+    setTimeout(removeError, 2000);
   }
 
   const handleSubmit = (event) => {
