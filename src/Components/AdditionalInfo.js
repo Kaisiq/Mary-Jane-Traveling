@@ -9,6 +9,7 @@ import { useLocation } from 'react-router-dom';
 
 function Info(){
     const [data,setData] = useState(null);
+    const [image,setImage] = useState(null);
     const [loading,setLoading] = useState(true);
     const [error, setError] = useState(null);
     const { state } = useLocation();
@@ -41,6 +42,19 @@ function Info(){
         }
     }
 
+
+    async function fetchImgFromFirebase(region) {
+        try {
+            const dataDescr = database.ref(`RegionData/${region}/url`);
+
+            const snapshot = await dataDescr.once("value");
+            const data = snapshot.val();
+            return JSON.stringify(data);
+        } catch (error) {
+            console.error("Error fetching data from Firebase:", error);
+        }
+    }
+
     useEffect(() => {
         fetchDataFromFirebase(state.location)
             .then(res => {
@@ -51,6 +65,17 @@ function Info(){
                 setError(error);
             })
             .finally(() => {
+                fetchImgFromFirebase(state.location)
+                    .then(res => {
+                        setImage(res.replace(/"/g, ""));
+                    })
+                    .catch(error => {
+                        console.error("Error fetc ", error);
+                        setError(error);
+                    })
+                    .finally(() => {
+                        setLoading(false);
+                    })
                 setLoading(false);
             });
     }, []);
@@ -77,7 +102,7 @@ function Info(){
               <p>{JSON.stringify(data,null,2)}</p>
                   <button className={"reserve"} onClick={goToBooking}>Резервирай</button>
               </div>
-              <img src={cityPic} alt={"cityPicture"}/>
+              <img src={image} alt={"cityPicture"}/>
           </div>
       </div>
     );
