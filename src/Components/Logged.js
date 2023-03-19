@@ -77,6 +77,8 @@ function Logged() {
     }
 
     async function handleFetch(region) {
+        var small_info = document.querySelector(".small-info");
+        small_info.classList.toggle("left-from-screen");
         currentRegion = region;
         const ulist = document.querySelector(".list_activities");
         const city_name = document.querySelector(".city_name");
@@ -143,7 +145,7 @@ function Logged() {
             
 
             </canvas>
-            <div className='small-info'>
+            <div className='small-info'> {/*TODO: add left-from-screen*/}
                 <button className={'back'} onClick={backOnMap}>Назад</button>
                 <div className={'justifyCenter'}>
                 <h2 className={"city_name"}></h2>
