@@ -260,11 +260,26 @@ code {
     width: 30%;
     height:100vh;
     background: #1b1b38;
-    justify-content: center;
     align-content: center;
     align-items: center;
     color:white;
-    transition: 0.3s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+.left-from-screen{
+    transform: translateX(-100%);
+}
+.justifyCenter{
+    height:100%;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.small-info .back{
+    vertical-align: top;
+    align-self: flex-end;
+    /*top:0;*/
+    /*right:0;*/
 }
 .list_activities{
     width:80%;
@@ -434,11 +449,20 @@ header{
     display:flex;
     flex-direction: column;
 }
+.eighty{
+    width: 80%;
+    margin-inline: auto;
+}
+.city_name{
+    text-align: center;
+    font-size: 3rem;
+    margin: 0 0 20px 0;
+}
 .flex-info{
     margin-inline: auto;
     display:flex;
     width: 90%;
-    gap: 25px;
+    gap: max(40px,5%);
     flex:1;
 }
 
@@ -458,7 +482,7 @@ header{
     text-align: justify;
 }
 .flex-info div p{
-    width: 70%;
+    /*width: 70%;*/
     margin-inline:auto;
 }
 

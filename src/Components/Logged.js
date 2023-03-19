@@ -120,6 +120,12 @@ function Logged() {
         handleFetch("Lovech");
     }
 
+
+    function backOnMap(){
+        var small_info = document.querySelector(".small-info");
+        small_info.classList.toggle("left-from-screen");
+    }
+
     return (
         <div className='main-screen'>
             <header className={"header-nav"}>
@@ -136,6 +142,8 @@ function Logged() {
 
             </canvas>
             <div className='small-info'>
+                <button className={'back'} onClick={backOnMap}>Назад</button>
+                <div className={'justifyCenter'}>
                 <h2 className={"city_name"}></h2>
                 <img src={""} alt={""} />
                 <div className={'buttons'}>
@@ -148,6 +156,7 @@ function Logged() {
                 <div className={'buttons'}>
                     <button onClick={goCreateTravel}>Организирай ми почивка</button>
                     <button onClick={goToBooking}>Резервирай</button>
+                </div>
                 </div>
             </div>
         </div>
