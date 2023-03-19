@@ -127,7 +127,7 @@ function Logged() {
         while(ulist.firstChild){
             ulist.removeChild(ulist.firstChild);
         }
-        handleFetch("Lovech");
+        handleFetch("Ловеч");
     }
 
 
