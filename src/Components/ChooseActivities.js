@@ -50,7 +50,7 @@ function ChooseActivities(){
               checked={checkedItems.hiking}
               onChange={handleChange}
             />
-            Hiking
+            Катерене
           </label>
           <label className={'music box'}>
             <input
@@ -59,7 +59,7 @@ function ChooseActivities(){
               checked={checkedItems.music}
               onChange={handleChange}
             />
-            Music
+            Музика
           </label>
           <label className={'theatre box'}>
             <input
@@ -68,7 +68,7 @@ function ChooseActivities(){
               checked={checkedItems.theatre}
               onChange={handleChange}
             />
-            Theatre
+            Театър
           </label>
           <label className={'sport box'}>
             <input
@@ -77,7 +77,7 @@ function ChooseActivities(){
               checked={checkedItems.sport}
               onChange={handleChange}
             />
-            Sport
+            Спорт
           </label>
             <label className={'museum box'}>
                 <input
@@ -86,7 +86,7 @@ function ChooseActivities(){
                     checked={checkedItems.museum}
                     onChange={handleChange}
                 />
-                Museum
+                Музеи
             </label>
             <label className={'videogames box'}>
                 <input
@@ -95,7 +95,7 @@ function ChooseActivities(){
                     checked={checkedItems.videogames}
                     onChange={handleChange}
                 />
-                Videogames
+                Видеоигри
             </label>
             <label className={'art box'}>
                 <input
@@ -104,7 +104,7 @@ function ChooseActivities(){
                     checked={checkedItems.art}
                     onChange={handleChange}
                 />
-                Art
+                Изкуство
             </label>
             <label className={'films box'}>
                 <input
@@ -113,7 +113,7 @@ function ChooseActivities(){
                     checked={checkedItems.films}
                     onChange={handleChange}
                 />
-                Films
+                Филми
             </label>
             <label className={'sightseeing box'}>
                 <input
@@ -122,7 +122,7 @@ function ChooseActivities(){
                     checked={checkedItems.sightseeing}
                     onChange={handleChange}
                 />
-                Sightseeing
+                Гледки
             </label>
             <label className={'clubbing box'}>
                 <input
@@ -131,9 +131,9 @@ function ChooseActivities(){
                     checked={checkedItems.clubbing}
                     onChange={handleChange}
                 />
-                Clubbing
+                Клубове
             </label>
-            <button onClick={handleConfirmation}>Confirm Selection</button>
+            <button onClick={handleConfirmation}>Запазване</button>
         </form>
       </div>
     );

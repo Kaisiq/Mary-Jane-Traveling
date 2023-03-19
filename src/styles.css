@@ -51,6 +51,13 @@ code {
     height: 100vh;
     background: #13132b;
 }
+.login-form h1{
+    margin:0;
+    color:white;
+    font-size: 4.5rem;
+    font-weight: bolder;
+    text-shadow: 0 1.5px 0 rgba(0, 0, 0, 0.4);
+}
 .space{
     z-index: 0;
     position: fixed;

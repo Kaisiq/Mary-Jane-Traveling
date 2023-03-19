@@ -161,15 +161,16 @@ function LoginForm() {
       <div id={"map"} className={'background'}></div>
       <div className={"error-message"} id={"error-msg"}></div>
       <form onSubmit={handleSubmit}>
+          <h1>Mary Jane</h1>
         <h2>{isRegistering ? 'Регистрация' : 'Влизане'}</h2>
         <label>
-          Email:
+          Имейл:
         </label>
-        <input type="email" value={email} placeholder={"your@email.com"} onChange={handleEmailChange} />
+        <input type="email" value={email} placeholder={"вашият@имейл.com"} onChange={handleEmailChange} />
         <label>
-          Password:
+          Парола:
         </label>
-        <input type="password" value={password} placeholder={"your password"} onChange={handlePasswordChange} />
+        <input type="password" value={password} placeholder={"вашата парола"} onChange={handlePasswordChange} />
         <button onClick={zoomin} type="submit">{isRegistering ? 'Регистриране' : 'Влизане'}</button>
         <div className={"flex"}>
         </div>
