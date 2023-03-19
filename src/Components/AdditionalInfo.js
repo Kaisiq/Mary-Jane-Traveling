@@ -26,7 +26,7 @@ function Info(){
         navigate('/');
     }
     function goBack(){
-        navigate('/Logged');
+        navigate('/Logged', {state: { uid: state.uid}});
     }
     async function fetchDataFromFirebase(region) {
         try {

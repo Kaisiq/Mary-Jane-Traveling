@@ -4,12 +4,12 @@ import defaultProfilePicture from "../media/default-profile-picture.jpg"
 import firebase from "../firebase";
 
 function Organise() {
-    // const { state }= useLocation();
-    // const uid = state.uid;
+     const { state }= useLocation();
+     const uid = state.uid;
     const navigate = useNavigate();
 
     function handleTransfer() {
-        navigate('/Logged');
+        navigate('/Logged', {state: { uid: state.uid}});
     }
 
 
