@@ -1,17 +1,24 @@
 import '../styles.css';
 import reportWebVitals from '../reportWebVitals';
 import firebase from '../firebase';
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from 'react';
 // import { useLocation } from "react-router-dom";
 
 
 
 function Logged(){
 // Get a reference to the Firebase database
-    // const { state } = useLocation();
+     const { state } = useLocation();
     const database = firebase.database();
     const navigate = useNavigate();
+   // const state = useLocation();
     var currentRegion = "";
+    let regions 
+
+    useEffect(() =>{
+        fetchRegionUserDataWrapper()
+    }, []); 
 
     function goToProfile(){
         navigate('/Profile');
@@ -84,6 +91,28 @@ function Logged(){
 
         // ulist.textContent = JSON.parse(descData);
         city_name.textContent = region;
+    }
+
+    async function fetchRegionUserData(){
+        const uid = state.uid
+        const userDataRef = database.ref(`Users/${uid}/regs`)
+        try{
+            const snapshot = await userDataRef.once("value")
+            return snapshot.val();
+        }
+        catch(error){
+        console.log("Error getting user data:", error);
+        return null;
+      }
+    }
+
+    const fetchRegionUserDataWrapper = async () =>{
+        try{
+        regions = await fetchRegionUserData()
+        console.log(regions)
+        }catch(error){
+             console.log("Error getting user data:", error);
+        }
     }
 
     async function testFetch() {
