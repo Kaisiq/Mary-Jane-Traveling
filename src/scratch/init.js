@@ -6,12 +6,11 @@ function init()
 	renderer = new THREE.WebGLRenderer( {antialias: true, alpha:true} );
 	document.body.appendChild( renderer.domElement );
 	renderer.setPixelRatio( window.devicePixelRatio );
-	renderer.setClearColor(0x000000, 0);
 	document.body.style.margin = 0;
 	document.body.style.overflow = 'hidden';
 	
 	scene = new THREE.Scene();
-	// scene.background = new THREE.Color('blue');
+	scene.background = new THREE.Color(0x153F7B);
 
 	camera = new THREE.PerspectiveCamera( 60, 1, 1, 1000 );
 	camera.position.set(0,0,100);

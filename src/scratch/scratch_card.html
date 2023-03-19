@@ -14,26 +14,9 @@
     <script src="init.js"></script>
     <script src="tween.umd.js"></script>
     <script src="mouse.js"></script>
-    <script src="CopyShader.js"></script>
-    <script src="EffectComposer.js"></script>
-    <script src="GLTFLoader.js"></script>
-    <script src="MaskPass.js"></script>
-    <script src="RenderPass.js"></script>
-    <script src="ShaderPass.js"></script>
-    <script src="ClearPass.js"></script>
-    <script src="TexturePass.js"></script>
   </head>
 
-  <body style="background-color: #153f7b">
-    <canvas
-      id="scratch"
-      style="
-        background: url(./images/02.png);
-        background-size: 100% 100%;
-        position: absolute;
-        display: none;
-      "
-    ></canvas>
+  <body>
     <script>
       init();
 
@@ -79,34 +62,40 @@
         fetch(path)
           .then((response) => response.json())
           .then((json) => {
-            let texture = new THREE.TextureLoader().load("./images/background.png");
+            let texture = new THREE.TextureLoader().load(
+              "./images/background.png"
+            );
 
-              texture.wrapS = THREE.RepeatWrapping;
-              texture.wrapT = THREE.RepeatWrapping;
-              texture.repeat.set(0.006, 0.006);
+            texture.wrapS = THREE.RepeatWrapping;
+            texture.wrapT = THREE.RepeatWrapping;
+            texture.repeat.set(0.0053, 0.01);
 
-              texture.offset.set(1.1, 0.5);
+            texture.offset.set(1.105, 0.56);
 
-              let mapTextureMaterial = new THREE.MeshBasicMaterial({
-                map: texture,
-              });
+            let mapTextureMaterial = new THREE.MeshBasicMaterial({
+              map: texture,
+            });
 
-              const scratchMaterial = new THREE.MeshBasicMaterial({
-                color: new THREE.Color(0xecc834),
-              });
-
+            const scratchMaterial = new THREE.MeshBasicMaterial({
+              color: new THREE.Color(0xecc834),
+            });
 
             camera.position.set(
               (center.x - 23) * 30,
-              (center.y - 43) * 30 /*-70*/,
-              90
+              (center.y - 43) * 30 - 40,
+              190
             );
             oldCameraCoords.copy(camera.position);
-            // camera.rotation.x = Math.PI / 6;
+            camera.rotation.x = Math.PI / 10;
+            let xCoord, yCoord;
             for (let j = 0; j < 28; j++) {
-              tweenHasStarted[j] = false;              
+              tweenHasStarted[j] = false;
 
               const districtShape = new THREE.Shape();
+              let firstDot =
+                  (json.features[j].geometry.coordinates[0][0][0] - 23) * 30,
+                secondDot =
+                  (json.features[j].geometry.coordinates[0][0][1] - 43) * 30;
 
               districtShape.moveTo(
                 (json.features[j].geometry.coordinates[0][0][0] - 23) * 30,
@@ -117,17 +106,19 @@
                 i < json.features[j].geometry.coordinates[0].length;
                 i++
               ) {
-                districtShape.lineTo(
-                  (json.features[j].geometry.coordinates[0][i][0] - 23) * 30,
-                  (json.features[j].geometry.coordinates[0][i][1] - 43) * 30
-                );
+                xCoord =
+                  (json.features[j].geometry.coordinates[0][i][0] - 23) * 30;
+                yCoord =
+                  (json.features[j].geometry.coordinates[0][i][1] - 43) * 30;
+                if (xCoord < firstDot) firstDot = xCoord;
+                if (yCoord > secondDot) secondDot = yCoord;
+                districtShape.lineTo(xCoord, yCoord);
               }
 
               const geometry = new THREE.ShapeGeometry(districtShape);
-              if(scratched.includes(j))
-              mesh = new THREE.Mesh(geometry, mapTextureMaterial);
-              else
-              mesh = new THREE.Mesh(geometry, scratchMaterial);
+              if (scratched.includes(j))
+                mesh = new THREE.Mesh(geometry, mapTextureMaterial);
+              else mesh = new THREE.Mesh(geometry, scratchMaterial);
 
               const lineGeometry = new THREE.BufferGeometry();
 
@@ -136,7 +127,6 @@
                 geometry.getAttribute("position")
               );
 
-              // create a Three.js line object and add it to the scene
               const line = new THREE.Line(
                 lineGeometry,
                 new THREE.LineBasicMaterial({
@@ -153,12 +143,11 @@
                 .applyMatrix4(mesh.matrixWorld);
               boundingBox.getSize(districtSize);
 
+              generateDotsForScratch(j,firstDot, secondDot, districtSize,mapTextureMaterial);
+
               scene.add(mesh);
-              if(j==0)
-            TRY = mesh;
 
               districts.push(mesh);
-              // sizes.push(districtSize);
 
               const box = new THREE.BoxHelper(
                 mesh,
@@ -169,7 +158,6 @@
             renderer.setAnimationLoop(frame);
 
             loadDistrictsTweens();
-            
           });
       }
 
@@ -188,6 +176,10 @@
 
       function animate(t) {
         raycaster.setFromCamera(mouseRaycaster, camera);
+        // if(canScratch)
+        // {
+          
+        // }
         intersects = raycaster.intersectObjects(districts);
 
         if (intersects != null && intersects.length != 0 && !cameraMoving) {
@@ -221,7 +213,28 @@
           districtsTweens.push(tweeni);
         }
       }
+
+      function generateDotsForScratch(districtIndex,firstDot, secondDot, districtSize,mapTextureMaterial) {
+        dots[districtIndex] = [];
+        for (let k = 0; k < 200; k++) {
+          const circleShape = new THREE.Shape();
+
+          // Define the geometry of the circle
+          const x = (firstDot + Math.random() * districtSize.x) * 0.47,
+            y = (secondDot + Math.random() * districtSize.y) * 0.52 - 11;
+
+          circleShape.moveTo(x + radiusScratch, y);
+          circleShape.arc(x, y, radiusScratch, startAngle, endAngle, false);
+
+          // Create a geometry from the shape
+          const geometry = new THREE.ShapeGeometry(circleShape);
+          let dot = new THREE.Mesh(geometry, mapTextureMaterial);
+          dot.position.z = 0.01;
+          dot.visible = false;
+          dots[districtIndex].push(dot);
+          scene.add(dot);
+        }
+      }
     </script>
-    <script src="Temp.js"></script>
   </body>
 </html>

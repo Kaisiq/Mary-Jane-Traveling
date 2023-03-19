@@ -1,11 +1,13 @@
-let mouse = new THREE.Vector2();
+let mouse = new THREE.Vector3();
+mouse.z = 0.01;
 let mouseRaycaster = new THREE.Vector2();
 let intersects;
 let districts = [],
   districtsTweens = [],
   tweenHasStarted = [],
   positionsOver = [],
-  scratched = [1, 5, 17];
+  scratched = [],
+  dots = [];
 let oldCameraCoords = new THREE.Vector3();
 const heightOverDistrict = 30;
 let canScratch = false,
@@ -13,7 +15,7 @@ let canScratch = false,
 let mapTextureMaterial;
 const startAngle = 0,
   endAngle = 2 * Math.PI,
-  radiusScratch = 5;
+  radiusScratch = 2.5;
 
 let mouseT = 0;
 var mouseButton = 0;
@@ -32,41 +34,22 @@ function onMouseDown(event) {
   mouse.y = event.clientY;
 }
 
-let a = new THREE.TextureLoader().load("./images/background.png");
-
-a.wrapS = THREE.RepeatWrapping;
-a.wrapT = THREE.RepeatWrapping;
-a.repeat.set(0.006, 0.006);
-
-a.offset.set(1.1, 0.5);
-
-let materialT = new THREE.MeshBasicMaterial({
-  map: a,
-});
-
-const materialM = new THREE.MeshBasicMaterial({ map: a });
-
 function onMouseUp(event) {
-  const circleShape = new THREE.Shape();
+  // const circleShape = new THREE.Shape();
 
-  // Define the geometry of the circle
-  const x = Math.random() * 50,
-    y = Math.random() * 50;
+  // const x = Math.random() * 50,
+  //   y = Math.random() * 50;
 
-  circleShape.moveTo(x + radiusScratch, y);
-  circleShape.arc(x, y, radiusScratch, startAngle, endAngle, false);
+  // circleShape.moveTo(x + radiusScratch, y);
+  // circleShape.arc(x, y, radiusScratch, startAngle, endAngle, false);
 
-  // Create a geometry from the shape
-  const geometry = new THREE.ShapeGeometry(circleShape);
-  let circleAz = new THREE.Mesh(geometry, materialM);
-  circleAz.position.z = 0.1;
-  // Add the mesh to the scene
-  scene.add(circleAz);
+  // const geometry = new THREE.ShapeGeometry(circleShape);
+  // let circleAz = new THREE.Mesh(geometry, materialM);
+  // circleAz.position.z = 0.01;
+  // scene.add(circleAz);
 
-  console.log(mouseButton);
   if (mouseButton == 1) {
-    if(canScratch)
-    return;
+    if (canScratch) return;
 
     if (intersects != null && intersects.length != 0) {
       var clickedObj = intersects[0].object;
